@@ -19,21 +19,24 @@ var path = {
         js: 'build/js',
         css: 'build/css',
         img: 'build/img',
-        fonts: 'build/fonts'
+        fonts: 'build/fonts',
+        data: 'build/data'
     },
     src: { //path of source
         html: 'src/*.html',
         js: 'src/js/main.js',
         css: 'src/css/main.less',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        data: 'build/data/**/*.*'
     },
     watch: { //see after
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         css: 'src/css/**/*.less',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        data: 'build/data/**/*.*'
     },
     clean: './build'
 };
@@ -79,12 +82,19 @@ gulp.task('fonts:build',function(){ // copy fonts from source to build
         .pipe(gulp.dest(path.build.fonts))
 });
 
+//data
+gulp.task('data:build',function(){ // copy fonts from source to build
+    gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts))
+});
+
 gulp.task('build', [ // building task
     'html:build',
     'js:build',
     'css:build',
     'fonts:build',
-    'img:build'
+    'img:build',
+    'data:build'
 ]);
 
 gulp.task('watch', function(event, cb){
@@ -102,6 +112,9 @@ gulp.task('watch', function(event, cb){
     });
     watch([path.watch.fonts], function(event, cb){
         gulp.start('fonts:build');
+    });
+    watch([path.watch.data], function(event, cb){
+        gulp.start('data:build');
     });
 });
 
