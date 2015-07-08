@@ -28,6 +28,7 @@
     "responsibilities": "Разработка логического и визуального функционала блога, тестирование",
     "team_size": 2,
     "technologies": ["HTML5", "CSS3", "Javascript", "jQuery", "AJAX", "PHP", "MySQL"],
+    "responsive": ["desktop", "tablet", "mobile"],
     "tools&IDE": ["JetBrains PHPStorm"],
     "img": "",
     "link": ""
@@ -45,6 +46,7 @@
     "responsibilities": "Анализ, оптимизация, рефакторинг",
     "team_size": 2,
     "technologies": ["HTML5", "CSS3", "Javascript", "jQuery", "AJAX", "PHP", "MySQL"],
+    "responsive": ["desktop", "tablet", "mobile"],
     "tools&IDE": ["JetBrains PHPStorm"],
     "img": "",
     "link": ""
@@ -62,13 +64,14 @@
     "responsibilities": "Дизайн суб-модулей, back-end кодирование, имплементация UI дизайна",
     "team_size": 4,
     "technologies": ["HTML5", "CSS3", "Javascript", "jQuery", "AJAX", "PHP", "Silex", "Twig"],
+    "responsive": "",
     "tools&IDE": ["JetBrains PHPStorm"],
     "img": "",
     "link": ""
   },
 
   {
-    "title": "Artel Autsorsing Group – веб-сервис для работы с разработчиками и клиентами по аутсорсу",
+    "title": "Artel Outsourcing Group – веб-сервис для работы с разработчиками и клиентами по аутсорсу",
     "description": "Группа страниц – лендинг-пейджи, страницы для проектов, формы регистрации, страницы профайлов пользователей -  для работы с разработчиками и клиентами по аутсорсу. Задействованы микросервис для авторизации пользователей с помощью Github, Stack Overflow, Odesk, система рейта для оценки разработчиком стоимости проекта.",
     "customer": "Ukraine",
     "involvement_duration": {
@@ -79,6 +82,7 @@
     "responsibilities": "Верстка макетов страниц проекта, реализация анимаций и сценариев, разработка  JS-приложений для регистрации, авторизации пользователей, оценки и комментирования проекта.",
     "team_size": 6,
     "technologies": ["HTML5", "CSS3", "Javascript", "jQuery", "AJAX", "PHP", "Symphony", "Twig"],
+    "responsive": ["desktop", "tablet", "mobile"],
     "tools&IDE": ["JetBrains PHPStorm"],
     "img": "",
     "link": ""
