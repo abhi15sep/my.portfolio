@@ -2,7 +2,7 @@
   {
     "title": "Разработка веб-страницы, веб-приложения для студии звукозаписи",
     "description": "Страница для представления информации о студии звукозаписи и её услугах",
-    "customer": "Ukraine",
+    "customer": "ukraine",
     "involvement_duration": {
       "start": "2014-06-00",
       "finish": "2014-08-00"
@@ -20,12 +20,12 @@
   {
     "title": "Реализация перевода iOS приложения",
     "description": "iOS приложение медицинской тематики для пластических хирургов, предназначенное для презентации и классификации имплантантов. В проекте был реализован перевод приложения на все основные европейские языки.",
-    "customer": "European Union",
+    "customer": "europe",
     "involvement_duration": {
       "start": "2014-08-00",
       "finish": "2014-11-00"
     },
-    "role": "Front-end Developer",
+    "role": ["frontend"],
     "responsibilities": "Имплементация перевода в приложение, правка стилей, исправление ошибок логики и отображения приложения, тестирование",
     "team_size": 5,
     "technologies": ["html5", "css3", "bootstrap", "javascript", "jquery", "jqueryMobile", "jquery UI", "backbone", "require.js", "yaml", "git" ],
@@ -38,12 +38,12 @@
   {
     "title": "Разработка блога для компании - разработчика игр BidonGames",
     "description": "Разработка блога для тематических статей и привлечения внимания целевой аудитории к продуктам, разрабатываемые компанией. В проекте была реализована админ-часть для авторизации администраторов, авторов статей с возможностью добавления и редактирования материала. В пользовательской части были реализованы подгрузка статей без перезагрузки страницы, репостинг в соц. сети.",
-    "customer": "Ukraine",
+    "customer": "ukraine",
     "involvement_duration": {
       "start": "2014-11-00",
       "finish": "2015-01-00"
     },
-    "role": "Full-stack Developer",
+    "role": ["full-stack"],
     "responsibilities": "Разработка логического и визуального функционала блога, тестирование",
     "team_size": 2,
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql"],
@@ -56,12 +56,12 @@
   {
     "title": "Оптимизация работы веб-сайта для компании-разработчика игр BidonGames",
     "description": "Рефакторинг и минимизация кода, оптимизация графических файлов, ускорение отклика и загрузки сайта. Исследование и анализ работы веб-страницы с европейских серверов. Работа с Google оптимизатором.",
-    "customer": "Ukraine",
+    "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-01-00",
       "finish": "2015-02-00"
     },
-    "role": "Full-stack Developer",
+    "role": ["full-stack"],
     "responsibilities": "Анализ, оптимизация, рефакторинг",
     "team_size": 2,
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql"],
@@ -74,12 +74,12 @@
   {
     "title": "Exaloc – веб-платформа для ставок на спортивные события",
     "description": "Веб-платформа предназначенная для осуществления ставок на ряд спортивныx событий в мире. Используется в странах Европы и Африки.",
-    "customer": "European Union",
+    "customer": "europe",
     "involvement_duration": {
       "start": "2015-02-00",
       "finish": "2015-04-00"
     },
-    "role": "Front-end Developer",
+    "role": ["frontend"],
     "responsibilities": "Дизайн суб-модулей, back-end кодирование, имплементация UI дизайна",
     "team_size": 4,
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "silex", "twig"],
@@ -92,12 +92,12 @@
   {
     "title": "Artel Outsourcing Group – веб-сервис для работы с разработчиками и клиентами по аутсорсу",
     "description": "Группа страниц – лендинг-пейджи, страницы для проектов, формы регистрации, страницы профайлов пользователей -  для работы с разработчиками и клиентами по аутсорсу. Задействованы микросервис для авторизации пользователей с помощью Github, Stack Overflow, Odesk, система рейта для оценки разработчиком стоимости проекта.",
-    "customer": "Ukraine",
+    "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-03-00",
       "finish": "2015-06-00"
     },
-    "role": "Front-end Developer",
+    "role": ["frontend"],
     "responsibilities": "Верстка макетов страниц проекта, реализация анимаций и сценариев, разработка  JS-приложений для регистрации, авторизации пользователей, оценки и комментирования проекта.",
     "team_size": 6,
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "symphony", "twig"],
