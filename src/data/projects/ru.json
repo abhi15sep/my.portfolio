@@ -1,17 +1,36 @@
 [
   {
-    "title": "Локализация iOS приложения",
-    "description": "iOS приложение медицинской тематики для пластических хирургов, предназначенное для презентации и классификации имплантантов. В проекте был реализован перевод приложения на все основные европейские языки.",
-    "customer": "Europe",
+    "title": "Разработка веб-страницы, веб-приложения для студии звукозаписи",
+    "description": "Страница для представления информации о студии звукозаписи и её услугах",
+    "customer": "ukraine",
     "involvement_duration": {
-      "start": "2014-08",
-      "finish": "2014-11"
+      "start": "2014-06-00",
+      "finish": "2014-08-00"
     },
-    "role": "Front-end Developer",
+    "role": ["design", "frontend"],
+    "responsibilities": "Разработка дизайна, структуры приложения, полная разработка макета и функционала",
+    "team_size": 1,
+    "technologies": ["html5", "css3", "javascript", "jquery", "json", "git" ],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains WebStorm"],
+    "img": "",
+    "link": ""
+  },
+
+  {
+    "title": "Реализация перевода iOS приложения",
+    "description": "iOS приложение медицинской тематики для пластических хирургов, предназначенное для презентации и классификации имплантантов. В проекте был реализован перевод приложения на все основные европейские языки.",
+    "customer": "europe",
+    "involvement_duration": {
+      "start": "2014-08-00",
+      "finish": "2014-11-00"
+    },
+    "role": ["frontend"],
     "responsibilities": "Имплементация перевода в приложение, правка стилей, исправление ошибок логики и отображения приложения, тестирование",
     "team_size": 5,
-    "technologies": ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "jQueryMobile", "jQuery UI", "Backbone", "Require.js", "yaml", "GIT" ],
-    "tools&IDE": ["JetBrains WebStorm"],
+    "technologies": ["html5", "css3", "bootstrap", "javascript", "jquery", "jqueryMobile", "jquery UI", "backbone", "require.js", "yaml", "git" ],
+    "realization": ["tablet"],
+    "tools": ["JetBrains WebStorm"],
     "img": "",
     "link": ""
   },
@@ -19,17 +38,17 @@
   {
     "title": "Разработка блога для компании - разработчика игр BidonGames",
     "description": "Разработка блога для тематических статей и привлечения внимания целевой аудитории к продуктам, разрабатываемые компанией. В проекте была реализована админ-часть для авторизации администраторов, авторов статей с возможностью добавления и редактирования материала. В пользовательской части были реализованы подгрузка статей без перезагрузки страницы, репостинг в соц. сети.",
-    "customer": "Ukraine",
+    "customer": "ukraine",
     "involvement_duration": {
-      "start": "2014-11",
-      "finish": "2015-01"
+      "start": "2014-11-00",
+      "finish": "2015-01-00"
     },
-    "role": "Full-stack Developer",
+    "role": ["full-stack"],
     "responsibilities": "Разработка логического и визуального функционала блога, тестирование",
     "team_size": 2,
-    "technologies": ["HTML5", "CSS3", "Javascript", "jQuery", "AJAX", "PHP", "MySQL"],
-    "responsive": ["desktop", "tablet", "mobile"],
-    "tools&IDE": ["JetBrains PHPStorm"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains PHPStorm"],
     "img": "",
     "link": ""
   },
@@ -37,17 +56,17 @@
   {
     "title": "Оптимизация работы веб-сайта для компании-разработчика игр BidonGames",
     "description": "Рефакторинг и минимизация кода, оптимизация графических файлов, ускорение отклика и загрузки сайта. Исследование и анализ работы веб-страницы с европейских серверов. Работа с Google оптимизатором.",
-    "customer": "Ukraine",
+    "customer": "ukraine",
     "involvement_duration": {
-      "start": "2015-01",
-      "finish": "2015-02"
+      "start": "2015-01-00",
+      "finish": "2015-02-00"
     },
-    "role": "Full-stack Developer",
+    "role": ["full-stack"],
     "responsibilities": "Анализ, оптимизация, рефакторинг",
     "team_size": 2,
-    "technologies": ["HTML5", "CSS3", "Javascript", "jQuery", "AJAX", "PHP", "MySQL"],
-    "responsive": ["desktop", "tablet", "mobile"],
-    "tools&IDE": ["JetBrains PHPStorm"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains PHPStorm"],
     "img": "",
     "link": ""
   },
@@ -55,17 +74,17 @@
   {
     "title": "Exaloc – веб-платформа для ставок на спортивные события",
     "description": "Веб-платформа предназначенная для осуществления ставок на ряд спортивныx событий в мире. Используется в странах Европы и Африки.",
-    "customer": "Europe",
+    "customer": "europe",
     "involvement_duration": {
-      "start": "2015-02",
-      "finish": "2015-04"
+      "start": "2015-02-00",
+      "finish": "2015-04-00"
     },
-    "role": "Front-end Developer",
+    "role": ["frontend"],
     "responsibilities": "Дизайн суб-модулей, back-end кодирование, имплементация UI дизайна",
     "team_size": 4,
-    "technologies": ["HTML5", "CSS3", "Javascript", "jQuery", "AJAX", "PHP", "Silex", "Twig"],
-    "responsive": "",
-    "tools&IDE": ["JetBrains PHPStorm"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "silex", "twig"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains PHPStorm"],
     "img": "",
     "link": ""
   },
@@ -73,17 +92,17 @@
   {
     "title": "Artel Outsourcing Group – веб-сервис для работы с разработчиками и клиентами по аутсорсу",
     "description": "Группа страниц – лендинг-пейджи, страницы для проектов, формы регистрации, страницы профайлов пользователей -  для работы с разработчиками и клиентами по аутсорсу. Задействованы микросервис для авторизации пользователей с помощью Github, Stack Overflow, Odesk, система рейта для оценки разработчиком стоимости проекта.",
-    "customer": "Ukraine",
+    "customer": "ukraine",
     "involvement_duration": {
-      "start": "2015-03",
-      "finish": "2015-06"
+      "start": "2015-03-00",
+      "finish": "2015-06-00"
     },
-    "role": "Front-end Developer",
+    "role": ["frontend"],
     "responsibilities": "Верстка макетов страниц проекта, реализация анимаций и сценариев, разработка  JS-приложений для регистрации, авторизации пользователей, оценки и комментирования проекта.",
     "team_size": 6,
-    "technologies": ["HTML5", "CSS3", "Javascript", "jQuery", "AJAX", "PHP", "Symphony", "Twig"],
-    "responsive": ["desktop", "tablet", "mobile"],
-    "tools&IDE": ["JetBrains PHPStorm"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "symphony", "twig"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains PHPStorm"],
     "img": "",
     "link": ""
   }
