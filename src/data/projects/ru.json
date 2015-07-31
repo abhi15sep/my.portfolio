@@ -1,16 +1,16 @@
 [
   {
     "title": "Разработка веб-страницы, веб-приложения для студии звукозаписи",
-    "description": "Страница для представления информации о студии звукозаписи",
+    "description": "Страница для представления информации о студии звукозаписи и её услугах",
     "customer": "Ukraine",
     "involvement_duration": {
-      "start": "2014-08-00",
-      "finish": "2014-11-00"
+      "start": "2014-06-00",
+      "finish": "2014-08-00"
     },
-    "role": "Front-end Developer",
-    "responsibilities": "Имплементация перевода в приложение, правка стилей, исправление ошибок логики и отображения приложения, тестирование",
-    "team_size": 5,
-    "technologies": ["html5", "css3", "bootstrap", "javascript", "jquery", "jqueryMobile", "jquery UI", "backbone", "require.js", "yaml", "git" ],
+    "role": ["design", "frontend"],
+    "responsibilities": "Разработка дизайна, структуры приложения, полная разработка макета и функционала",
+    "team_size": 1,
+    "technologies": ["html5", "css3", "javascript", "jquery", "json", "git" ],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains WebStorm"],
     "img": "",
