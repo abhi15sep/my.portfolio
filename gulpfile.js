@@ -20,7 +20,8 @@ var path = {
         css: 'build/css',
         img: 'build/img',
         fonts: 'build/fonts',
-        data: 'build/data'
+        data: 'build/data',
+        favicon: 'build/'
     },
     src: { //path of source
         html: 'src/*.html',
@@ -28,7 +29,8 @@ var path = {
         css: 'src/css/main.less',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
-        data: 'build/data/**/*.*'
+        data: 'build/data/**/*.*',
+        favicon: 'src/favicon.png'
     },
     watch: { //see after
         html: 'src/**/*.html',
@@ -36,7 +38,8 @@ var path = {
         css: 'src/css/**/*.less',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
-        data: 'build/data/**/*.*'
+        data: 'build/data/**/*.*',
+        favicon: 'src/favicon.png'
     },
     clean: './build'
 };
@@ -45,6 +48,12 @@ var path = {
 gulp.task('html:build', function(){
     gulp.src(path.src.html)
         .pipe(gulp.dest(path.build.html))
+});
+
+//favicon
+gulp.task('favicon:build', function(){
+    gulp.src(path.src.favicon)
+        .pipe(gulp.dest(path.build.favicon))
 });
 
 //js
@@ -58,8 +67,9 @@ gulp.task('js:build', function(){
 gulp.task('css:build', function(){
     gulp.src(path.src.css)
         .pipe(less())
-        .pipe(minifyCSS())
-        .pipe(rename({suffix: ".min"}))
+        //.pipe(minifyCSS())
+        .pipe(importCss())
+        //.pipe(rename({suffix: ".min"}))
         .pipe(prefixer())
         .pipe(gulp.dest(path.build.css))
 });
@@ -94,7 +104,8 @@ gulp.task('build', [ // building task
     'css:build',
     'fonts:build',
     'img:build',
-    'data:build'
+    'data:build',
+    'favicon:build'
 ]);
 
 gulp.task('watch', function(event, cb){
@@ -115,6 +126,9 @@ gulp.task('watch', function(event, cb){
     });
     watch([path.watch.data], function(event, cb){
         gulp.start('data:build');
+    });
+    watch([path.watch.favicon], function(event, cb){
+        gulp.start('favicon:build');
     });
 });
 
