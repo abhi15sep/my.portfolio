@@ -7,6 +7,7 @@
 @border-color-default: rgba(65, 65, 65, 0.4);
 @border-color-triangle: rgba(65, 65, 65, 0.8);
 @border-color-timeline: #e1e1e1;
+@border-color-tmicon: #d2d2d2;
 //@border-color-tmicon: #888888;
 
 /* default */
@@ -166,6 +167,7 @@ a:hover {
   width: 25%;
   padding-right: 100px;
   position: absolute;
+  top: 42px;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span {
@@ -216,6 +218,7 @@ a:hover {
 
 /* The triangle */
 .cbp_tmtimeline > li .cbp_tmlabel:after {
+  display: none;
   right: 100%;
   content: " ";
   height: 0;
@@ -223,36 +226,45 @@ a:hover {
   position: absolute;
   pointer-events: none;
   border: 10px solid transparent;
-  border-right-color: @border-color-triangle;
+  border-right-color: @border-color-tmicon;
   top: 10px;
 }
 
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-  border-right-color: @border-color-triangle;
-}
+//.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+//  border-right-color: @border-color-triangle;
+//}
 
 /* The icons */
 .cbp_tmtimeline > li .cbp_tmicon {
-  //position: relative;
-  //float: left;
-  width: 10px;
-  height: 10px;
-  font-family: "ecoico",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  font-size: 1.4em;
-  line-height: 40px;
+  //width: 10px;
+  //height: 10px;
+  //font-family: "ecoico",sans-serif;
+  //font-style: normal;
+  //font-weight: normal;
+  //font-variant: normal;
+  //text-transform: none;
+  //font-size: 1.4em;
+  //line-height: 40px;
+  //position: absolute;
+  //color: #FFF;
+  //background: #fff;
+  //box-shadow: 0 0 0 8px @border-color-tmicon;
+  //text-align: center;
+  //left: 22%;
+  //top: 15px;
+  //margin: 0 0 0 -22px;
+  //border-radius: 50%;
+
+  content: " ";
+  height: 0;
+  width: 0;
   position: absolute;
-  color: #FFF;
-  background: #fff;
-  box-shadow: 0 0 0 8px @border-color-timeline;
-  text-align: center;
+  pointer-events: none;
+  border: 10px solid transparent;
+  border-left-color: @border-color-tmicon;
   left: 22%;
-  top: 15px;
-  margin: 0 0 0 -22px;
-  border-radius: 50%;
+  top: 52px;
+  margin: 0 0 0 -12px;
 }
 
 //.cbp_tmicon-phone:before {
@@ -275,7 +287,10 @@ a:hover {
 @media screen and (max-width: 65.375em) {
 
   .cbp_tmtimeline > li .cbp_tmtime span:last-child {
-    font-size: 1.5em;
+    font-size: 1.7em;
+  }
+  .cbp_tmtimeline > li .cbp_tmtime {
+    top: 44px;
   }
 }
 
@@ -288,6 +303,7 @@ a:hover {
     width: 100%;
     position: relative;
     padding: 0 0 20px 0;
+    top: 0;
   }
 
   .cbp_tmtimeline > li .cbp_tmtime span {
@@ -302,17 +318,18 @@ a:hover {
   }
 
   .cbp_tmtimeline > li .cbp_tmlabel:after {
+    display: block;
     right: auto;
     left: 20px;
     border-right-color: transparent;
-    border-bottom-color: #3594cb;
+    border-bottom-color: @border-color-triangle;
     top: -20px;
   }
 
-  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-    border-right-color: transparent;
-    border-bottom-color: #6cbfee;
-  }
+  //.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+  //  border-right-color: transparent;
+  //  border-bottom-color: #6cbfee;
+  //}
 
   .cbp_tmtimeline > li .cbp_tmicon {
     display: none;

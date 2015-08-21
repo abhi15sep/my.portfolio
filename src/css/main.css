@@ -138,6 +138,7 @@ a:hover {
   width: 25%;
   padding-right: 100px;
   position: absolute;
+  top: 42px;
 }
 .cbp_tmtimeline > li .cbp_tmtime span {
   display: block;
@@ -169,6 +170,7 @@ a:hover {
 }
 /* The triangle */
 .cbp_tmtimeline > li .cbp_tmlabel:after {
+  display: none;
   right: 100%;
   content: " ";
   height: 0;
@@ -176,37 +178,29 @@ a:hover {
   position: absolute;
   pointer-events: none;
   border: 10px solid transparent;
-  border-right-color: rgba(65, 65, 65, 0.8);
+  border-right-color: #d2d2d2;
   top: 10px;
-}
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-  border-right-color: rgba(65, 65, 65, 0.8);
 }
 /* The icons */
 .cbp_tmtimeline > li .cbp_tmicon {
-  width: 10px;
-  height: 10px;
-  font-family: "ecoico", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  font-size: 1.4em;
-  line-height: 40px;
+  content: " ";
+  height: 0;
+  width: 0;
   position: absolute;
-  color: #FFF;
-  background: #fff;
-  box-shadow: 0 0 0 8px #e1e1e1;
-  text-align: center;
+  pointer-events: none;
+  border: 10px solid transparent;
+  border-left-color: #d2d2d2;
   left: 22%;
-  top: 15px;
-  margin: 0 0 0 -22px;
-  border-radius: 50%;
+  top: 52px;
+  margin: 0 0 0 -12px;
 }
 /* Media Queries */
 @media screen and (max-width: 65.375em) {
   .cbp_tmtimeline > li .cbp_tmtime span:last-child {
-    font-size: 1.5em;
+    font-size: 1.7em;
+  }
+  .cbp_tmtimeline > li .cbp_tmtime {
+    top: 44px;
   }
 }
 @media screen and (max-width: 47.2em) {
@@ -217,6 +211,7 @@ a:hover {
     width: 100%;
     position: relative;
     padding: 0 0 20px 0;
+    top: 0;
   }
   .cbp_tmtimeline > li .cbp_tmtime span {
     text-align: left;
@@ -228,15 +223,12 @@ a:hover {
     font-size: 95%;
   }
   .cbp_tmtimeline > li .cbp_tmlabel:after {
+    display: block;
     right: auto;
     left: 20px;
     border-right-color: transparent;
-    border-bottom-color: #3594cb;
+    border-bottom-color: rgba(65, 65, 65, 0.8);
     top: -20px;
-  }
-  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-    border-right-color: transparent;
-    border-bottom-color: #6cbfee;
   }
   .cbp_tmtimeline > li .cbp_tmicon {
     display: none;
