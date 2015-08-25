@@ -1,6 +1,7 @@
-@import url("partials/import.css");
-//@import url("partials/reset.css");s
+//@import url("partials/import.css");
+//@import url("partials/reset.css");
 @import url("partials/fonts.css");
+//@import url("partials/font-awesome.min.css");
 
 
 @font-color-default: #414141;
@@ -53,12 +54,14 @@ a:hover {
   line-height: 1.3;
   margin: 0;
   float: left;
-  font-weight: 400;
+  //font-weight: 400;
+  font-family: 'Lato-Regular', sans-serif;
 }
 
 .container > header span {
   display: block;
-  font-weight: 700;
+  //font-weight: 700;
+  font-family: 'Lato-Bold', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5em;
   padding: 0 0 0.6em 0.1em;
@@ -140,6 +143,31 @@ a:hover {
   content: "\f060";
 }
 
+/*****  realization  *****/
+.faw {
+  font-size: 18px;
+  letter-spacing: 6px;
+  margin-top: 2px;
+}
+.fa {
+  display: inline-block;
+  font-family: 'fontawesome', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  &.fa-desktop::before {
+    content: "";
+  }
+  &.fa-tablet::before {
+    content: "";
+  }
+  &.fa-mobile-phone::before,
+  &.fa-mobile::before {
+    content: "";
+  }
+}
+
 
 
 .cbp_tmtimeline {
@@ -199,21 +227,56 @@ a:hover {
   color: @font-color-default;
   padding: 2em;
   font-size: 1.2em;
-  font-weight: 300;
+  //font-weight: 300;
+  font-family: 'Lato-Light', sans-serif;
   line-height: 1.4;
   position: relative;
   border-radius: 5px;
   border: 1px solid @border-color-default;
+
+  h2 {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid @border-color-default;
+  }
+
+  dl {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+
+    dt {
+      position: relative;
+      top: 3px;
+      //float: left;
+      //width: 15%;
+      font-family: Lato-Light, sans-serif;
+      font-size: .8em;
+      text-transform: lowercase;
+      padding-right: 10px;
+      //min-height: 32px;
+      //line-height: 27px;
+    }
+    dd {
+      font-family: Lato-Regular, sans-serif;
+      font-size: .8em;
+      text-transform: uppercase;
+
+      &.text {
+        text-transform: none;
+      }
+    }
+  }
+  .role,
+  .web-tech {
+    font-size: 13px;
+    //margin-top: 10px;
+  }
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
   //background: #fff;
-}
-
-.cbp_tmtimeline > li .cbp_tmlabel h2 {
-  margin-top: 0;
-  padding: 0 0 10px 0;
-  border-bottom: 1px solid @border-color-default;
 }
 
 /* The triangle */
@@ -314,7 +377,8 @@ a:hover {
   .cbp_tmtimeline > li .cbp_tmlabel {
     margin: 0 0 30px 0;
     padding: 1em;
-    font-weight: 400;
+    //font-weight: 400;
+    font-family: 'Lato-Regular', sans-serif;
     font-size: 95%;
   }
 
