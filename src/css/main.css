@@ -19,7 +19,11 @@ body {
 }
 a {
   color: #f0f0f0;
-  text-decoration: none;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
 }
 a:hover {
   color: #000;
@@ -113,6 +117,9 @@ a:hover {
 }
 .icon-arrow-left:before {
   content: "\f060";
+}
+.hidden {
+  display: none;
 }
 /*****  realization  *****/
 .faw {
@@ -215,6 +222,18 @@ a:hover {
 .cbp_tmtimeline > li .cbp_tmlabel .role,
 .cbp_tmtimeline > li .cbp_tmlabel .web-tech {
   font-size: 13px;
+}
+.cbp_tmtimeline > li .cbp_tmlabel a.details-btn {
+  color: black;
+  display: inline-block;
+  font-family: 'Lato-Regular', sans-serif;
+  font-size: 0.7em;
+  text-decoration: underline;
+  outline: none;
+  margin-top: 10px;
+}
+.cbp_tmtimeline > li .cbp_tmlabel a.details-btn:hover {
+  color: #494949;
 }
 /* The triangle */
 .cbp_tmtimeline > li .cbp_tmlabel:after {

@@ -30,7 +30,8 @@ body {
 
 a {
   color: #f0f0f0;
-  text-decoration: none;
+
+  .transition(.3s);
 }
 
 a:hover {
@@ -141,6 +142,18 @@ a:hover {
 
 .icon-arrow-left:before {
   content: "\f060";
+}
+
+.hidden {
+  display: none;
+}
+
+.transition(@time) {
+  -webkit-transition: @time all;
+  -moz-transition: @time all;
+  -ms-transition: @time all;
+  -o-transition: @time all;
+  transition: @time all;
 }
 
 /*****  realization  *****/
@@ -273,6 +286,20 @@ a:hover {
     font-size: 13px;
     //margin-top: 10px;
   }
+
+  a.details-btn {
+    color: black;
+    display: inline-block;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 0.7em;
+    text-decoration: underline;
+    outline: none;
+    margin-top: 10px;
+  }
+  a.details-btn:hover {
+    color: #494949;
+  }
+
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
