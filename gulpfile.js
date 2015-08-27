@@ -20,6 +20,7 @@ var path = {
         css: 'build/css',
         img: 'build/img',
         fonts: 'build/fonts',
+        view: 'build/view',
         data: 'build/data',
         favicon: 'build/'
     },
@@ -29,6 +30,7 @@ var path = {
         css: 'src/css/main.less',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
+        view: 'src/view/**/*.*',
         data: 'build/data/**/*.*',
         favicon: 'src/favicon.png'
     },
@@ -38,6 +40,7 @@ var path = {
         css: 'src/css/**/*.less',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
+        view: 'src/view/**/*.*',
         data: 'build/data/**/*.*',
         favicon: 'src/favicon.png'
     },
@@ -86,6 +89,12 @@ gulp.task('img:build', function(){
         .pipe(gulp.dest(path.build.img))
 });
 
+//view
+gulp.task('view:build',function(){ // copy fonts from source to build
+    gulp.src(path.src.view)
+        .pipe(gulp.dest(path.build.view))
+});
+
 //fonts
 gulp.task('fonts:build',function(){ // copy fonts from source to build
     gulp.src(path.src.fonts)
@@ -102,6 +111,7 @@ gulp.task('build', [ // building task
     'html:build',
     'js:build',
     'css:build',
+    'view:build',
     'fonts:build',
     'img:build',
     'data:build',
@@ -120,6 +130,9 @@ gulp.task('watch', function(event, cb){
     });
     watch([path.watch.img], function(event, cb){
         gulp.start('img:build');
+    });
+    watch([path.watch.view], function(event, cb){
+        gulp.start('view:build');
     });
     watch([path.watch.fonts], function(event, cb){
         gulp.start('fonts:build');
