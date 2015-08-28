@@ -14,6 +14,16 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'); // tracking changes to files
 
 var path = {
+    src: { //path of source
+        html: 'src/*.html',
+        js: 'src/js/**/*.*',
+        css: 'src/css/main.less',
+        img: 'src/img/**/*.*',
+        fonts: 'src/fonts/**/*.*',
+        view: 'src/view/**/*.*',
+        data: 'src/data/**/*.*',
+        favicon: 'src/favicon.png'
+    },
     build: { //path of build
         html: 'build/',
         js: 'build/js',
@@ -23,16 +33,6 @@ var path = {
         view: 'build/view',
         data: 'build/data',
         favicon: 'build/'
-    },
-    src: { //path of source
-        html: 'src/*.html',
-        js: 'src/js/app.js',
-        css: 'src/css/main.less',
-        img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*',
-        view: 'src/view/**/*.*',
-        data: 'build/data/**/*.*',
-        favicon: 'src/favicon.png'
     },
     watch: { //see after
         html: 'src/**/*.html',
@@ -62,7 +62,7 @@ gulp.task('favicon:build', function(){
 //js
 gulp.task('js:build', function(){
     gulp.src(path.src.js)
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(path.build.js))
 });
 
@@ -103,8 +103,8 @@ gulp.task('fonts:build',function(){ // copy fonts from source to build
 
 //data
 gulp.task('data:build',function(){ // copy fonts from source to build
-    gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
+    gulp.src(path.src.data)
+        .pipe(gulp.dest(path.build.data))
 });
 
 gulp.task('build', [ // building task
