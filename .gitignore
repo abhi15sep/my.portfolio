@@ -73,6 +73,3 @@ crashlytics-build.properties
 
 # Build folder
 /build
-
-# bower_components
-/bower_components
