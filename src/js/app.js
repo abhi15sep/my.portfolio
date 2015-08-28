@@ -8,7 +8,6 @@ var Helper = {
 
     redirect: function () {
         window.location.replace( window.location.origin + '#ru' );
-        Helper.toggleDetails();
     },
 
     toggleDetails: function () {
@@ -94,20 +93,11 @@ var App = (function () {
 
         Render = {
 
-            content: function(tmpName) {
-                var content = Get.twigContent(tmpName, TMPdata[0]);
-                console.log(TMPdata);
+            content: function(tmpName, data) {
+                var content = Get.twigContent(tmpName, data);
 
                 $('#content').empty().html(content);
-                //
-                //if(tmpName != 'main') {
-                //    Render.footer();
-                //    Helper.initMainMenu();
-                //    Helper.setActiveClass('.nav-' + tmpName);
-                //    Helper.initMobileBtnMenu()
-                //} else {
-                //    Render.footer('clear');
-                //}
+                Helper.toggleDetails();
             }
 
         },
@@ -115,58 +105,9 @@ var App = (function () {
         initRouting = function () {
             routie({
 
-                '': function() {
-                    console.log('/');
-                    //Render.header();
-                    Render.content('project');
+                'ru': function() {
+                    Render.content('project', {projects: TMPdata});
                 }
-
-                //'about': function() {
-                //    Render.content('about');
-                //
-                //    Helper.initOwlCarousel('#equipment, #room, #people');
-                //},
-                //
-                //'contacts': function() {
-                //    Render.content('contacts');
-                //},
-                //
-                //'audioClips': function() {
-                //    Render.content('audioClips');
-                //
-                //    Helper.initUbaPlayer();
-                //},
-                //
-                //'production': function() {
-                //    Render.content('production');
-                //
-                //    Helper.initUbaPlayer();
-                //},
-                //
-                //'instrumental': function() {
-                //    Render.content('instrumental');
-                //
-                //    Helper.initUbaPlayer();
-                //},
-                //
-                //'speaker': function() {
-                //    Render.content('speaker');
-                //
-                //    Helper.initUbaPlayer();
-                //},
-                //
-                //'voiceVideo': function() {
-                //    Render.content('voiceVideo');
-                //
-                //    Helper.initUbaPlayer();
-                //},
-                //
-                //'answerPhone': function() {
-                //    Render.content('answerPhone');
-                //
-                //    Helper.initUbaPlayer();
-                //}
-
             });
         };
 
