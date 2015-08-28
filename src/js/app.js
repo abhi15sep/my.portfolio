@@ -3,6 +3,11 @@
 var Helper = {
 
     init: function () {
+        Helper.redirect()
+    },
+
+    redirect: function () {
+        window.location.replace( window.location.origin + '#ru' );
         Helper.toggleDetails();
     },
 
