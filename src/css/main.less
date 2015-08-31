@@ -9,7 +9,6 @@
 @border-color-triangle: rgba(65, 65, 65, 0.8);
 @border-color-timeline: #e1e1e1;
 @border-color-tmicon: #d2d2d2;
-//@border-color-tmicon: #888888;
 
 /* default */
 *, *:after, *:before {
@@ -36,6 +35,12 @@ a {
 
 a:hover {
   color: #000;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 3px 15px 5px 15px;
+  border: 1px solid @font-color-default;
 }
 
 .main,
@@ -287,16 +292,15 @@ a:hover {
     //margin-top: 10px;
   }
 
-  a.details-btn {
+  a.detail {
     color: black;
     display: inline-block;
     font-family: 'Lato-Regular', sans-serif;
     font-size: 0.7em;
-    text-decoration: underline;
     outline: none;
-    margin-top: 10px;
+    margin-top: 25px;
   }
-  a.details-btn:hover {
+  a.detail:hover {
     color: #494949;
   }
 

@@ -28,6 +28,11 @@ a {
 a:hover {
   color: #000;
 }
+.btn {
+  text-decoration: none;
+  padding: 3px 15px 5px 15px;
+  border: 1px solid #414141;
+}
 .main,
 .container > header {
   width: 95%;
@@ -223,16 +228,15 @@ a:hover {
 .cbp_tmtimeline > li .cbp_tmlabel .web-tech {
   font-size: 13px;
 }
-.cbp_tmtimeline > li .cbp_tmlabel a.details-btn {
+.cbp_tmtimeline > li .cbp_tmlabel a.detail {
   color: black;
   display: inline-block;
   font-family: 'Lato-Regular', sans-serif;
   font-size: 0.7em;
-  text-decoration: underline;
   outline: none;
-  margin-top: 10px;
+  margin-top: 25px;
 }
-.cbp_tmtimeline > li .cbp_tmlabel a.details-btn:hover {
+.cbp_tmtimeline > li .cbp_tmlabel a.detail:hover {
   color: #494949;
 }
 /* The triangle */

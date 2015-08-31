@@ -11,7 +11,7 @@ var Helper = {
     },
 
     toggleDetails: function () {
-        $('.details-btn').on('click', function (event) {
+        $('.detail').on('click', function (event) {
             event.preventDefault();
 
             $(this).siblings('.details').toggleClass('hidden');
@@ -29,6 +29,9 @@ var App = (function () {
             },
             views: {
                 project: 'projects.twig'
+            },
+            container: {
+                content: '#content'
             }
         },
 
@@ -43,7 +46,6 @@ var App = (function () {
             Get.TMPdata(function() {
                 initRouting();
             });
-
         },
 
         Create = {
@@ -96,7 +98,7 @@ var App = (function () {
             content: function(tmpName, data) {
                 var content = Get.twigContent(tmpName, data);
 
-                $('#content').empty().html(content);
+                $(config.container.content).empty().html(content);
                 Helper.toggleDetails();
             }
 
