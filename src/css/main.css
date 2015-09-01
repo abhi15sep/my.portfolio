@@ -1,3 +1,4 @@
+@import url("partials/reset.css");
 @import url("partials/fonts.css");
 /* default */
 *,
@@ -28,9 +29,20 @@ a {
 a:hover {
   color: #000;
 }
+p,
+dl {
+  display: block;
+  margin: 1em 0;
+}
 .btn {
+  display: inline-block;
+  color: black;
+  height: 27px;
+  font-family: 'Lato-Regular', sans-serif;
+  font-size: 0.7em;
   text-decoration: none;
-  padding: 3px 15px 5px 15px;
+  line-height: 25px;
+  padding: 0 15px;
   border: 1px solid #414141;
 }
 .main,
@@ -220,6 +232,7 @@ a:hover {
   font-family: Lato-Regular, sans-serif;
   font-size: .8em;
   text-transform: uppercase;
+  margin-left: 40px;
 }
 .cbp_tmtimeline > li .cbp_tmlabel dl dd.text {
   text-transform: none;
@@ -227,17 +240,6 @@ a:hover {
 .cbp_tmtimeline > li .cbp_tmlabel .role,
 .cbp_tmtimeline > li .cbp_tmlabel .web-tech {
   font-size: 13px;
-}
-.cbp_tmtimeline > li .cbp_tmlabel a.detail {
-  color: black;
-  display: inline-block;
-  font-family: 'Lato-Regular', sans-serif;
-  font-size: 0.7em;
-  outline: none;
-  margin-top: 25px;
-}
-.cbp_tmtimeline > li .cbp_tmlabel a.detail:hover {
-  color: #494949;
 }
 /* The triangle */
 .cbp_tmtimeline > li .cbp_tmlabel:after {
@@ -263,6 +265,25 @@ a:hover {
   top: 52px;
   margin: 0 0 0 -25px;
   background: #d2d2d2;
+}
+/*****  buttons  *****/
+.buttons {
+  margin-top: 25px;
+}
+.buttons li {
+  float: left;
+  list-style-type: none;
+  margin-left: 10px;
+}
+.buttons li:first-child {
+  margin-left: 0;
+}
+.buttons a.detail {
+  display: inline-block;
+  outline: none;
+}
+.buttons a.detail:hover {
+  color: #494949;
 }
 /* Media Queries */
 @media screen and (max-width: 65.375em) {

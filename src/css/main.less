@@ -1,5 +1,5 @@
 //@import url("partials/import.css");
-//@import url("partials/reset.css");
+@import url("partials/reset.css");
 @import url("partials/fonts.css");
 //@import url("partials/font-awesome.min.css");
 
@@ -37,9 +37,20 @@ a:hover {
   color: #000;
 }
 
+p, dl {
+  display: block;
+  margin: 1em 0;
+}
+
 .btn {
+  display: inline-block;
+  color: black;
+  height: 27px;
+  font-family: 'Lato-Regular', sans-serif;
+  font-size: 0.7em;
   text-decoration: none;
-  padding: 3px 15px 5px 15px;
+  line-height: 25px;
+  padding: 0 15px;
   border: 1px solid @font-color-default;
 }
 
@@ -280,6 +291,7 @@ a:hover {
       font-family: Lato-Regular, sans-serif;
       font-size: .8em;
       text-transform: uppercase;
+      margin-left: 40px;
 
       &.text {
         text-transform: none;
@@ -291,19 +303,6 @@ a:hover {
     font-size: 13px;
     //margin-top: 10px;
   }
-
-  a.detail {
-    color: black;
-    display: inline-block;
-    font-family: 'Lato-Regular', sans-serif;
-    font-size: 0.7em;
-    outline: none;
-    margin-top: 25px;
-  }
-  a.detail:hover {
-    color: #494949;
-  }
-
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
@@ -377,6 +376,29 @@ a:hover {
 //.cbp_tmicon-earth:before {
 //  content: "\e003";
 //}
+
+
+/*****  buttons  *****/
+.buttons {
+  margin-top: 25px;
+
+  li {
+    float: left;
+    list-style-type: none;
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a.detail {
+    display: inline-block;
+    outline: none;
+  }
+  a.detail:hover {
+    color: #494949;
+  }
+}
 
 /* Media Queries */
 @media screen and (max-width: 65.375em) {

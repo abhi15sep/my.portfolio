@@ -34,7 +34,12 @@
                         {% endfor %}
                     </dd>
                 </dl>
-                <a href="#details" class="btn detail">Далее</a>
+                <ul class="buttons clearfix">
+                    <li><a href="#details" class="btn detail">Ещё инфо</a></li>
+                    {% if project.img.length %}
+                    <li><a href="#images" class="btn images">Смотреть</a></li>
+                    {% endif %}
+                </ul>
                 <dl class="details hidden">
                     <dt class="">Описание:</dt>
                     <dd class="text">{{ project.description }}</dd>

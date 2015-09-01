@@ -14,7 +14,7 @@ var Helper = {
         $('.detail').on('click', function (event) {
             event.preventDefault();
 
-            $(this).siblings('.details').toggleClass('hidden');
+            $(this).closest('.cbp_tmlabel').find('.details').toggleClass('hidden');
         })
     }
 
