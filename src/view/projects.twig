@@ -1,5 +1,6 @@
 <ul class="cbp_tmtimeline">
     {% for project in projects | reverse %}
+        {% set count = loop.index %}
         <li>
             <time class="cbp_tmtime">
                 <span>
@@ -37,7 +38,16 @@
                 <ul class="buttons clearfix">
                     <li><a href="#details" class="btn detail">Ещё инфо</a></li>
                     {% if project.img.length %}
-                    <li><a href="#images" class="btn images">Смотреть</a></li>
+                        <li>
+                            <a data-lightbox="roadtrip-{{ count }}" href="/img/projects/project_{{ count }}-1.jpg" class="btn images">Смотреть</a>
+                            {% if project.img.length > 1 %}
+                                <div class="hidden">
+                                    {% for src in project.img %}
+                                        <a data-lightbox="roadtrip-{{ count }}" class="lightbox" href="/img/projects/{{ src[loop.index + 1] }}"></a>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </li>
                     {% endif %}
                 </ul>
                 <dl class="details hidden">
