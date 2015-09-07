@@ -43,7 +43,7 @@
                                 <div class="hidden">
                                     {% for src in project.img %}
                                         {% if loop.index > 1 %}
-                                            <a data-lightbox="roadtrip-{{ count }}" class="lightbox" href="/img/projects/{{ src }}">{{ src }}</a>
+                                            <a data-lightbox="roadtrip-{{ project.id }}" class="lightbox" href="/img/projects/{{ src }}">{{ src }}</a>
                                         {% endif %}
                                     {% endfor %}s
                                 </div>
