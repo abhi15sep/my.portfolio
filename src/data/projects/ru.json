@@ -11,11 +11,11 @@
     "role": ["design", "frontend"],
     "responsibilities": "Разработка дизайна, структуры приложения, полная разработка макета и функционала",
     "team_size": 1,
-    "technologies": ["html5", "css3", "javascript", "jquery", "json", "git" ],
+    "technologies": ["html5", "css3", "javascript", "jquery", "twig", "json", "git" ],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains WebStorm"],
     "img": ["project_1-1.jpg", "project_1-2.jpg", "project_1-3.jpg", "project_1-4.jpg", "project_1-5.png", "project_1-6.png", "project_1-7.png", "project_1-8.png", "project_1-9.png", "project_1-10.png", "project_1-11.png"],
-    "link": ""
+    "link": "http://maplemap.github.io/page.vostok-record"
   },
 
   {
