@@ -50,6 +50,9 @@
                             {% endif %}
                         </li>
                     {% endif %}
+                    {% if project.link %}
+                        <li><a href="{{ project.link }}" class="btn link" target="_blank">Ссылка</a></li>
+                    {% endif %}
                 </ul>
                 <dl class="details hidden">
                     <dt class="">Описание:</dt>
