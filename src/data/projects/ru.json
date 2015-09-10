@@ -52,7 +52,7 @@
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
-    "img": [],
+    "img": ["project_3-1.jpg", "project_3-2.jpg", "project_3-3.png", "project_3-4.png"],
     "link": ""
   },
 
