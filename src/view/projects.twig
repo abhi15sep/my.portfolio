@@ -38,7 +38,7 @@
                     <li><a href="#details" class="btn detail">Ещё инфо</a></li>
                     {% if project.img.length %}
                         <li>
-                            <a data-lightbox="roadtrip-{{ project.id }}" href="/img/projects/project_{{ project.id }}-1.jpg" class="btn images">Смотреть</a>
+                            <a data-lightbox="roadtrip-{{ project.id }}" href="/img/projects/{{ project.img[0] }}" class="btn images">Смотреть</a>
                             {% if project.img.length > 1 %}
                                 <div class="hidden">
                                     {% for src in project.img %}
