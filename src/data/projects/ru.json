@@ -109,7 +109,7 @@
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "symphony", "twig"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
-    "img": [],
+    "img": ["project_6-1.png", "project_6-2.png", "project_6-3.png", "project_6-4.png", "project_6-5.png", "project_6-6.png", "project_6-7.png", "project_6-8.png", "project_6-9.png", "project_6-10.png"],
     "link": ""
   }
 ]
