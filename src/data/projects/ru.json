@@ -9,7 +9,7 @@
       "finish": "2014-08"
     },
     "role": ["design", "frontend"],
-    "responsibilities": "Разработка дизайна, структуры приложения, полная разработка макета и функционала",
+    "responsibilities": "Разработка дизайна, структуры приложения, полная разработка функционала",
     "team_size": 1,
     "technologies": ["html5", "css3", "javascript", "jquery", "twig", "json", "git" ],
     "realization": ["desktop", "tablet", "mobile"],
@@ -20,15 +20,15 @@
 
   {
     "id": 2,
-    "title": "Реализация перевода iOS приложения",
-    "description": "iOS приложение медицинской тематики для пластических хирургов, предназначенное для презентации и классификации имплантантов. В проекте был реализован перевод приложения на все основные европейские языки.",
+    "title": "Локализация iOS приложения компании Allergan",
+    "description": "Приложение медицинской тематики для iOS, предназначенное для презентации и классификации имплантантов в пластической хирургии. В проекте был реализованы переводы приложения на все основные европейские языки.",
     "customer": "europe",
     "involvement_duration": {
       "start": "2014-08",
       "finish": "2014-11"
     },
     "role": ["frontend"],
-    "responsibilities": "Имплементация перевода в приложение, правка стилей, исправление ошибок логики и отображения приложения, тестирование",
+    "responsibilities": "Имплементация переводов в приложение, правка стилей, исправление ошибок логики и отображения приложения, тестирование",
     "team_size": 5,
     "technologies": ["html5", "css3", "bootstrap", "javascript", "jquery", "jqueryMobile", "jquery UI", "backbone", "require.js", "yaml", "git" ],
     "realization": ["tablet"],
@@ -39,8 +39,8 @@
 
   {
     "id": 3,
-    "title": "Разработка блога для компании - разработчика игр BidonGames",
-    "description": "Разработка блога для тематических статей и привлечения внимания целевой аудитории к продуктам, разрабатываемые компанией. В проекте была реализована админ-часть для авторизации администраторов, авторов статей с возможностью добавления и редактирования материала. В пользовательской части были реализованы подгрузка статей без перезагрузки страницы, репостинг в соц. сети.",
+    "title": "Разработка блога для компании-разработчика игр BidonGames",
+    "description": "Разработка блога для тематических статей и привлечения внимания целевой аудитории к продуктам, разрабатываемые компанией. В проекте была реализована админ-часть для администраторов и авторов статей с возможностью добавления и редактирования материала. В пользовательской части были реализованы подгрузка статей без перезагрузки страницы, репостинг в соц. сети.",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2014-11",
@@ -49,7 +49,7 @@
     "role": ["full-stack"],
     "responsibilities": "Разработка логического и визуального функционала блога, тестирование",
     "team_size": 2,
-    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
     "img": ["project_3-1.jpg", "project_3-2.jpg", "project_3-3.png", "project_3-4.png"],
@@ -68,11 +68,11 @@
     "role": ["full-stack"],
     "responsibilities": "Анализ, оптимизация, рефакторинг",
     "team_size": 2,
-    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
     "img": [],
-    "link": ""
+    "link": "http://www.bidon-games.com/"
   },
 
   {
@@ -87,7 +87,7 @@
     "role": ["frontend"],
     "responsibilities": "Дизайн суб-модулей, back-end кодирование, имплементация UI дизайна",
     "team_size": 4,
-    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "silex", "twig"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "silex", "twig", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
     "img": [],
@@ -97,16 +97,16 @@
   {
     "id": 6,
     "title": "Artel Outsourcing Group – веб-сервис для работы с разработчиками и клиентами по аутсорсу",
-    "description": "Группа страниц – лендинг-пейджи, страницы для проектов, формы регистрации, страницы профайлов пользователей -  для работы с разработчиками и клиентами по аутсорсу. Задействованы микросервис для авторизации пользователей с помощью Github, Stack Overflow, Odesk, система рейта для оценки разработчиком стоимости проекта.",
+    "description": "Группа страниц – лендинг-пейджи, страницы для проектов, формы регистрации, страницы профайлов пользователей -  для работы с разработчиками и клиентами по аутсорсу. Задействованы микросервис для авторизации пользователей с помощью Github, Stack Overflow, Odesk, система рейта стоимости проекта.",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-04",
       "finish": "2015-07"
     },
     "role": ["frontend"],
-    "responsibilities": "Верстка макетов страниц проекта, реализация анимаций и сценариев, разработка  JS-приложений для регистрации, авторизации пользователей, оценки и комментирования проекта.",
+    "responsibilities": "Верстка макетов страниц проекта, реализация анимаций и сценариев, разработка JS-приложений для регистрации, авторизации пользователей, оценки и комментирования проекта.",
     "team_size": 6,
-    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "symphony", "twig"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "symphony", "twig", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
     "img": ["project_6-1.png", "project_6-2.png", "project_6-3.png", "project_6-4.png", "project_6-5.png", "project_6-6.png", "project_6-7.png", "project_6-8.png", "project_6-9.png", "project_6-10.png"],
