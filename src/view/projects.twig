@@ -11,14 +11,14 @@
                 <h2>{{ project.title }}</h2>
                 <p>{{ project.responsibilities }}</p>
                 <dl>
-                    <dt>роль:</dt>
+                    <dt>{{ locale.role }}:</dt>
                     <dd class="role">
                         {% for role in project.role %}
                             {{ role }}
                             {% if loop.index != loop.length %} / {% endif %}
                         {% endfor %}
                     </dd>
-                    <dt>реализация:</dt>
+                    <dt>{{ locale.realization }}:</dt>
                     <dd>
                         <div class="faw">
                             {% for realization in project.realization %}
@@ -26,21 +26,21 @@
                             {% endfor %}
                         </div>
                     </dd>
-                    <dt>технологии:</dt>
+                    <dt>{{ locale.technologies }}:</dt>
                     <dd class="web-tech">
                         {% for technologies in project.technologies %}
                             {{ technologies }}
                             {% if loop.index != loop.length %} / {% endif %}
                         {% endfor %}
                     </dd>
-                    <dt class="">Количество участников:</dt>
+                    <dt class="">{{ locale.team_size }}:</dt>
                     <dd class="text">{{ project.team_size}}</dd>
                 </dl>
                 <ul class="buttons clearfix">
-                    <li><a href="#details" class="btn detail">Ещё инфо</a></li>
+                    <li><a href="#details" class="btn detail">{{ locale.more }}</a></li>
                     {% if project.img.length %}
                         <li>
-                            <a data-lightbox="roadtrip-{{ project.id }}" href="/img/projects/{{ project.img[0] }}" class="btn images">Смотреть</a>
+                            <a data-lightbox="roadtrip-{{ project.id }}" href="/img/projects/{{ project.img[0] }}" class="btn images">{{ locale.see }}</a>
                             {% if project.img.length > 1 %}
                                 <div class="hidden">
                                     {% for src in project.img %}
@@ -53,15 +53,15 @@
                         </li>
                     {% endif %}
                     {% if project.link %}
-                        <li><a href="{{ project.link }}" class="btn link" target="_blank">Ссылка</a></li>
+                        <li><a href="{{ project.link }}" class="btn link" target="_blank">{{ locale.link }}</a></li>
                     {% endif %}
                 </ul>
                 <dl class="details hidden">
-                    <dt class="">Описание:</dt>
+                    <dt class="">{{ locale.description }}:</dt>
                     <dd class="text">{{ project.description }}</dd>
-                    <dt class="">Заказчик:</dt>
+                    <dt class="">{{ locale.customer }}:</dt>
                     <dd class="text">{{ project.customer | capitalize }}</dd>
-                    <dt class="">Инструменты:</dt>
+                    <dt class="">{{ locale.tools }}:</dt>
                     <dd class="text">
                         {% for tools in project.tools %}
                             {{ tools }}
