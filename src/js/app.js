@@ -4,10 +4,15 @@ var Helper = {
 
     init: function () {
         Helper.redirect()
+        Helper.fadeInContent();
     },
 
     redirect: function () {
         window.location.replace( window.location.origin + '#ru' );
+    },
+
+    fadeInContent: function () {
+        $('#content').hide().fadeIn(800);
     },
 
     toggleDetails: function () {
