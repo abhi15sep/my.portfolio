@@ -1,0 +1,27 @@
+{
+  "en": {
+    "role": "role",
+    "realization": "реализация",
+    "technologies": "технологии",
+    "team_size": "количество участников",
+    "description": "описание",
+    "customer": "заказчик",
+    "tools": "инструменты",
+    "more": "more",
+    "see": "see",
+    "link": "link"
+  },
+
+  "ru": {
+    "role": "роль",
+    "realization": "реализация",
+    "technologies": "технологии",
+    "team_size": "количество участников",
+    "description": "описание",
+    "customer": "заказчик",
+    "tools": "инструменты",
+    "more": "ещё инфо",
+    "see": "смотреть",
+    "link": "ссылка"
+  }
+}
