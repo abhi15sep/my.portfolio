@@ -3,7 +3,7 @@
 var Helper = {
 
     init: function () {
-        Helper.redirect()
+        Helper.redirect();
         Helper.fadeInContent();
     },
 
@@ -30,7 +30,8 @@ var App = (function () {
     var config = {
             path: {
                 templates: './view/',
-                templatesData: './data/projects/ru.json'
+                templatesData: './data/projects/',
+                localeData: './data/locale.json'
             },
             views: {
                 project: 'projects.twig'
@@ -40,15 +41,14 @@ var App = (function () {
             }
         },
 
+        lang = false,
         TMPdata = false,
-
-        Templates = {
-            project: false
-        },
+        localeData = false,
+        Template = {},
 
         init = function () {
 
-            Get.TMPdata(function() {
+            Get.localeData(function() {
                 initRouting();
             });
         },
@@ -56,8 +56,7 @@ var App = (function () {
         Create = {
 
             twigTMP: function (tmpName, data, callback) {
-
-                Templates[tmpName] = twig({
+                Template[tmpName] = twig({
                     id: tmpName,
                     href: config.path.templates + config.views[tmpName],
                     async: false,
@@ -74,16 +73,26 @@ var App = (function () {
         Get = {
 
             TMPdata: function (callback) {
-                $.get(config.path.templatesData, function(data){
+                var path = config.path.templatesData + lang + '.json';
+
+                $.get(path, function(data){
                     TMPdata = data;
 
                     callback();
                 });
             },
 
+            localeData: function (callback) {
+                $.get(config.path.localeData, function(data){
+
+                    localeData = data;
+                    callback();
+                });
+            },
+
             twigContent: function (tmpName, data) {
-                var twigTemplate = twig({ ref: tmpName }), content = '';
-                data = data || TMPdata[tmpName];
+                var twigTemplate = twig({ ref: tmpName }),
+                    content = '';
 
                 if( twigTemplate ) {
                     content = twigTemplate.render(data);
@@ -104,7 +113,14 @@ var App = (function () {
                 var content = Get.twigContent(tmpName, data);
 
                 $(config.container.content).empty().html(content);
+
                 Helper.toggleDetails();
+            },
+
+            project: function() {
+                Get.TMPdata(function () {
+                    Render.content('project', {projects: TMPdata, locale: localeData[lang]});
+                });
             }
 
         },
@@ -112,9 +128,16 @@ var App = (function () {
         initRouting = function () {
             routie({
 
+                'en': function() {
+                    lang = 'en';
+                    Render.project();
+                },
+
                 'ru': function() {
-                    Render.content('project', {projects: TMPdata});
+                    lang = 'ru';
+                    Render.project();
                 }
+
             });
         };
 
