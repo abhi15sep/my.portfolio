@@ -41,9 +41,13 @@ dl {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 0.7em;
   text-decoration: none;
+  text-align: center;
   line-height: 25px;
   padding: 0 15px;
   border: 1px solid #414141;
+}
+.btn:first-letter {
+  text-transform: uppercase;
 }
 .main,
 .container > header {
