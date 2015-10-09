@@ -101,7 +101,7 @@
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-04",
-      "finish": "2015-07"
+      "finish": "2015-09"
     },
     "role": ["frontend"],
     "responsibilities": "Верстка макетов страниц проекта, реализация анимаций и сценариев, разработка JS-приложений для регистрации, авторизации пользователей, оценки и комментирования проекта.",
@@ -111,5 +111,24 @@
     "tools": ["JetBrains PHPStorm"],
     "img": ["project_6-1.png", "project_6-2.png", "project_6-3.png", "project_6-4.png", "project_6-5.png", "project_6-6.png", "project_6-7.png", "project_6-8.png", "project_6-9.png", "project_6-10.png"],
     "link": "http://www.artel-outsourcing.com/"
+  },
+
+  {
+    "id": 7,
+    "title": "Чат с поддержкой мультимедиа на Node.js",
+    "description": "Чат с возможностью добавления в сообщения изображений, видео, кусочков кода и иконок для отображения эмоций(смайлов). Построен на технологииях Node.js и Socket.IO",
+    "customer": "ukraine",
+    "involvement_duration": {
+      "start": "2015-09",
+      "finish": "2015-10"
+    },
+    "role": ["full-stack"],
+    "responsibilities": "Разработка функционала разбора мультимедийных сообщений для отфильтровывания ссылок, изображений, видео и иконок для отображения эмоций(смайлов). Осуществления алгоритма подгрузки истории сообщений по заданным критериям. Адаптация под мобильные разрешения",
+    "team_size": 3,
+    "technologies": ["html5", "css3", "javascript", "jquery", "node.js", "express", "socket.io", "mongoDB", "twig", "git"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains WebStorm"],
+    "img": [],
+    "link": ""
   }
 ]
