@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "description": "portfolio page",
+  "main": "index.html",
+  "authors": [
+    "sergey.illarionov <easthunch@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MapleMap/my.portfolio",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "lightbox2": "~2.8.1",
+    "twig.js": "~0.8.4",
+    "routie": "~0.3.2"
+  }
+}

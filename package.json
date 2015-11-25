@@ -15,14 +15,12 @@
     "gulp-import-css": "^0.1.2",
     "gulp-less": "*",
     "gulp-minify-css": "*",
+    "gulp-concat": "^2.6.0",
     "gulp-rename": "*",
     "gulp-uglify": "*",
     "gulp-uncss": "*",
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
     "rimraf": "*"
-  },
-  "dependencies": {
-    "bootstrap": "^3.3.5"
   }
 }

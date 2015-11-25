@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'), // minify css
     prefixer = require('gulp-autoprefixer'), // prefix for browsers (-o, -moz)
     rename = require("gulp-rename"), // rename files
+    concat = require('gulp-concat'), // concat js
     uglify = require('gulp-uglify'), // minify js
     imagemin = require('gulp-imagemin'), //minify img
     importCss = require('gulp-import-css'), //import css one to one css
@@ -16,7 +17,13 @@ var gulp = require('gulp'),
 var path = {
     src: { //path of source
         html: 'src/*.html',
-        js: 'src/js/**/*.*',
+        js: [
+            './bower_components/jquery/dist/jquery.js',
+            './bower_components/lightbox2/dist/js/lightbox.js',
+            './bower_components/twig.js/twig.js',
+            './bower_components/routie/dist/routie.js',
+            './src/js/app.js'
+        ],
         css: 'src/css/main.less',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
@@ -62,7 +69,9 @@ gulp.task('favicon:build', function(){
 //js
 gulp.task('js:build', function(){
     gulp.src(path.src.js)
-        //.pipe(uglify())
+        .pipe(concat('app.js'))
+        .pipe(uglify())
+        .pipe(rename({suffix: ".min"}))
         .pipe(gulp.dest(path.build.js))
 });
 
@@ -70,9 +79,9 @@ gulp.task('js:build', function(){
 gulp.task('css:build', function(){
     gulp.src(path.src.css)
         .pipe(less())
-        //.pipe(minifyCSS())
         .pipe(importCss())
-        //.pipe(rename({suffix: ".min"}))
+        .pipe(minifyCSS())
+        .pipe(rename({suffix: ".min"}))
         .pipe(prefixer())
         .pipe(gulp.dest(path.build.css))
 });

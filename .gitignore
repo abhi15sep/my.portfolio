@@ -72,4 +72,5 @@ crashlytics.properties
 crashlytics-build.properties
 
 # Build folder
+/bower_components
 /build
