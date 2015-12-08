@@ -122,7 +122,6 @@ var App = (function () {
                     Render.content('project', {projects: TMPdata, locale: localeData[lang]});
                 });
             }
-
         },
 
         initRouting = function () {

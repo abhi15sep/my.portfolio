@@ -73,7 +73,7 @@ gulp.task('favicon:build', function(){
 gulp.task('js:build', function(){
     gulp.src(path.src.js)
         .pipe(concat('app.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(rename({suffix: ".min"}))
         .pipe(gulp.dest(path.build.js))
 });
