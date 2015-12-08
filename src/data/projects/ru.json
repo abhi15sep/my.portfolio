@@ -142,7 +142,7 @@
       "finish": "2015-12"
     },
     "role": ["frontend"],
-    "responsibilities": "Разработка шаблонов для верстки, верстка макетов, разработка JS-сценариев",
+    "responsibilities": "Разработка шаблонов для верстки, верстка макетов, разработка JS-сценариев - роутинг, генерация страниц, контроллеры",
     "team_size": 3,
     "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "ajax", "twig", "symfony", "git"],
     "realization": ["desktop", "tablet"],
