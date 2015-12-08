@@ -25,7 +25,10 @@ var path = {
             './src/js/app.js'
         ],
         css: 'src/css/main.less',
-        img: 'src/img/**/*.*',
+        img: [
+            './bower_components/lightbox2/dist/images/*.*',
+            'src/img/**/*.*'
+        ],
         fonts: 'src/fonts/**/*.*',
         view: 'src/view/**/*.*',
         data: 'src/data/**/*.*',
@@ -70,7 +73,7 @@ gulp.task('favicon:build', function(){
 gulp.task('js:build', function(){
     gulp.src(path.src.js)
         .pipe(concat('app.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(rename({suffix: ".min"}))
         .pipe(gulp.dest(path.build.js))
 });
