@@ -636,7 +636,7 @@ dl {
 }
 .contacts li a {
   display: block;
-  color: #4b4b4b;
+  color: #666;
   font-size: 20px;
   font-family: 'fontello';
 }
