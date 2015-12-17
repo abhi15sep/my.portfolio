@@ -1,13 +1,13 @@
 {
   "en": {
     "role": "role",
-    "realization": "реализация",
-    "technologies": "технологии",
-    "team_size": "количество участников",
-    "description": "описание",
-    "customer": "заказчик",
-    "tools": "инструменты",
-    "more": "more",
+    "realization": "realization",
+    "technologies": "technologies",
+    "team_size": "team size",
+    "description": "description",
+    "customer": "customer",
+    "tools": "tools",
+    "more": "more info",
     "see": "see",
     "link": "link"
   },
