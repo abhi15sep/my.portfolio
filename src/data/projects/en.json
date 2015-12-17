@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "title": "Разработка веб-страницы (веб-приложения) для студии звукозаписи",
-    "description": "Страница для представления информации о студии звукозаписи и её услугах",
+    "title": "Designing of web-page (web-application) for record studio",
+    "description": "Info page about record studio and its services",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2014-06",
       "finish": "2014-08"
     },
     "role": ["design", "frontend"],
-    "responsibilities": "Разработка дизайна, структуры приложения, полная разработка функционала",
+    "responsibilities": "Design, application structure and functional development",
     "team_size": 1,
     "technologies": ["html5", "css3", "javascript", "jquery", "twig", "json", "git" ],
     "realization": ["desktop", "tablet", "mobile"],
@@ -20,15 +20,15 @@
 
   {
     "id": 2,
-    "title": "Локализация iOS приложения компании Allergan",
-    "description": "Приложение медицинской тематики для iOS, предназначенное для презентации и классификации имплантантов в пластической хирургии. В проекте был реализованы переводы приложения на все основные европейские языки.",
+    "title": "Localization of iOS application for Allergan company",
+    "description": "iOS medical application for presentations and classification of implants in plastic surgery. In project were implemented translations on all main european languages",
     "customer": "europe",
     "involvement_duration": {
       "start": "2014-08",
       "finish": "2014-11"
     },
     "role": ["frontend"],
-    "responsibilities": "Имплементация переводов в приложение, правка стилей, исправление ошибок логики и отображения приложения, тестирование",
+    "responsibilities": "Implementation of translations in application, correction of styles, logical errors, and images, testing",
     "team_size": 5,
     "technologies": ["html5", "css3", "bootstrap", "javascript", "jquery", "jqueryMobile", "jquery UI", "backbone", "require.js", "yaml", "git" ],
     "realization": ["tablet"],
@@ -39,15 +39,15 @@
 
   {
     "id": 3,
-    "title": "Разработка блога для компании-разработчика игр BidonGames",
-    "description": "Разработка блога для тематических статей и привлечения внимания целевой аудитории к продуктам, разрабатываемые компанией. В проекте была реализована админ-часть для администраторов и авторов статей с возможностью добавления и редактирования материала. В пользовательской части были реализованы подгрузка статей без перезагрузки страницы, репостинг в соц. сети.",
+    "title": "Development of blog for game developing company BidonGames",
+    "description": "Blog for subject articles to attract attention of the target audience to the products developed by the company. The project presupposes administrative services conducted by administrators and authors of articles to  add and edit materials. User services allow post loading without reloading of the page, reposting in the social network.",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2014-11",
       "finish": "2015-01"
     },
     "role": ["full-stack"],
-    "responsibilities": "Разработка логического и визуального функционала блога, тестирование",
+    "responsibilities": "Development of logical and visual functional of blog, testing",
     "team_size": 2,
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql", "git"],
     "realization": ["desktop", "tablet", "mobile"],
@@ -58,15 +58,15 @@
 
   {
     "id": 4,
-    "title": "Оптимизация работы веб-сайта для компании-разработчика игр BidonGames",
-    "description": "Рефакторинг и минимизация кода, оптимизация графических файлов, ускорение отклика и загрузки сайта. Исследование и анализ работы веб-страницы с европейских серверов. Работа с Google оптимизатором.",
+    "title": "Optimization of website running for game developing company Bidon Games",
+    "description": "Refactoring and code minimization, optimization of image files, speeding up response time and download process. Research and analysis of the web pages of the European servers. Work with Google Optimizer",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-01",
       "finish": "2015-02"
     },
     "role": ["full-stack"],
-    "responsibilities": "Анализ, оптимизация, рефакторинг",
+    "responsibilities": "Analysis, optimization, refactoring",
     "team_size": 2,
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql", "git"],
     "realization": ["desktop", "tablet", "mobile"],
@@ -77,15 +77,15 @@
 
   {
     "id": 5,
-    "title": "Exaloc – веб-платформа для ставок на спортивные события",
-    "description": "Веб-платформа предназначенная для осуществления ставок на ряд спортивныx событий в мире. Используется в странах Европы и Африки.",
+    "title": "Exalogic — web platform for betting on sporting events",
+    "description": "Web platform is designed for the implementation of a series of bets on sporting events in the world. Used in Europe and Africa",
     "customer": "europe",
     "involvement_duration": {
       "start": "2015-02",
       "finish": "2015-04"
     },
     "role": ["frontend"],
-    "responsibilities": "Дизайн суб-модулей, back-end кодирование, имплементация UI дизайна",
+    "responsibilities": "Design of sub-modules, back-end coding, implementation of UI design",
     "team_size": 4,
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "silex", "twig", "git"],
     "realization": ["desktop", "tablet", "mobile"],
@@ -96,20 +96,58 @@
 
   {
     "id": 6,
-    "title": "Artel Outsourcing Group – веб-сервис для работы с разработчиками и клиентами по аутсорсу",
-    "description": "Группа страниц – лендинг-пейджи, страницы для проектов, формы регистрации, страницы профайлов пользователей -  для работы с разработчиками и клиентами по аутсорсу. Задействованы микросервис для авторизации пользователей с помощью Github, Stack Overflow, Odesk, система рейта стоимости проекта.",
+    "title": "Artel Outsourcing Group - a web service for developers and customers of outsourcing",
+    "description": "Landing-pages, pages for projects, forms of registration, user profiles. Authorization of users via Github, Stack Overflow, Odesk. System for project rate evaluation",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-04",
       "finish": "2015-07"
     },
     "role": ["frontend"],
-    "responsibilities": "Верстка макетов страниц проекта, реализация анимаций и сценариев, разработка JS-приложений для регистрации, авторизации пользователей, оценки и комментирования проекта.",
+    "responsibilities": "Development of templates for the layout, realization of animations and scripts, JS-development applications for registration, authorization of users, evaluating and commenting on project",
     "team_size": 6,
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "symphony", "twig", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
     "img": ["project_6-1.png", "project_6-2.png", "project_6-3.png", "project_6-4.png", "project_6-5.png", "project_6-6.png", "project_6-7.png", "project_6-8.png", "project_6-9.png", "project_6-10.png"],
     "link": "http://www.artel-outsourcing.com/"
+  },
+
+  {
+    "id": 7,
+    "title": "Chat with multimedia support on Node.js",
+    "description": "Chat with the possibility of adding of images, videos, pieces of code and icons to display emotions to the posts. Designed on the basis of Node.js and  Socket.IO",
+    "customer": "ukraine",
+    "involvement_duration": {
+      "start": "2015-09",
+      "finish": "2015-10"
+    },
+    "role": ["full-stack"],
+    "responsibilities": "The development of the functional for analysis of multimedia messages in order to filter links, images, videos and icons to display emotions. Implementation of the algorithm for downloading message history on the specified criteria. Adaptation for mobile application",
+    "team_size": 3,
+    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "node.js", "express", "socket.io", "mongoDB", "twig", "git"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains WebStorm"],
+    "img": [],
+    "link": ""
+  },
+
+  {
+    "id": 8,
+    "title": "Web application - system of online trading in the Forex market",
+    "description": "Trading system for brokers who trade on the Forex stock exchange, with personal pages, statistics, scores, accounts and bonuses",
+    "customer": "ukraine",
+    "involvement_duration": {
+      "start": "2015-10",
+      "finish": "2015-12"
+    },
+    "role": ["frontend"],
+    "responsibilities": "Development of templates for the layout, development of js-scripts for routing, page generating, controllers",
+    "team_size": 3,
+    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "ajax", "twig", "symfony", "git"],
+    "realization": ["desktop", "tablet"],
+    "tools": ["JetBrains WebStorm", "Photoshop"],
+    "img": ["project_8-1.jpg", "project_8-2.jpg", "project_8-3.jpg", "project_8-4.jpg", "project_8-5.jpg", "project_8-6.jpg"],
+    "link": ""
   }
 ]
