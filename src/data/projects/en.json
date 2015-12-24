@@ -68,7 +68,7 @@
     "role": ["full-stack"],
     "responsibilities": "Analysis, optimization, refactoring",
     "team_size": 2,
-    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql", "git"],
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
     "img": [],
