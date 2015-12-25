@@ -70,6 +70,35 @@ p, dl {
   padding: 0 1.875em 3.125em;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.icon-drop:before {
+  content: "\e000";
+}
+
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+.hidden {
+  display: none;
+}
+
+.transition(@time) {
+  -webkit-transition: @time all;
+  -moz-transition: @time all;
+  -ms-transition: @time all;
+  -o-transition: @time all;
+  transition: @time all;
+}
+
 /*** header ***/
 
 .container > header {
@@ -127,6 +156,80 @@ p, dl {
   }
 }
 
+/*** menu ***/
+menu {
+  float: right;
+  position: relative;
+  font-size: 14px;
+  bottom: -15px;
+
+  & > li {
+    float: left;
+    margin-left: 10px;
+
+    & > span {
+      float: left;
+      font-size: 9px;
+      text-transform: uppercase;
+      line-height: 24px;
+    }
+  }
+
+  #lang {
+    float: right;
+    color: #fff;
+    width: 20px;
+    height: 19px;
+    font-size: 14px;
+    font-family: Lato-Bold, sans-serif;
+    text-align: center;
+    line-height: 122%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px 0 0 3px;
+    background: #666;
+    .transition(.3s);
+
+    &:hover {
+      background: @font-color-default;
+    }
+  }
+
+  .contacts {
+    float: right;
+
+    li {
+      float: left;
+      margin-left: 6px;
+
+      a {
+        display: block;
+        color: #666;
+        font-size: 21px;
+        font-family: 'fontello';
+
+        &:hover:before {
+          color: @font-color-default;
+          .transition(.3s);
+        }
+
+        &.twitter:before {
+          content: '\e801';
+        }
+        &.github:before {
+          content: '\e800';
+        }
+        &.linkedin:before {
+          content: '\e802';
+        }
+        &.mail:before {
+          content: '\e803';
+        }
+      }
+    }
+  }
+}
+
 .icon-drop:before,
 .icon-arrow-left:before {
   font-family: 'fontawesome', sans-serif;
@@ -146,35 +249,6 @@ p, dl {
 
 .container > header nav a:hover:before {
   color: #fff;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-
-.icon-drop:before {
-  content: "\e000";
-}
-
-.icon-arrow-left:before {
-  content: "\f060";
-}
-
-.hidden {
-  display: none;
-}
-
-.transition(@time) {
-  -webkit-transition: @time all;
-  -moz-transition: @time all;
-  -ms-transition: @time all;
-  -o-transition: @time all;
-  transition: @time all;
 }
 
 /*****  realization  *****/
@@ -343,42 +417,6 @@ p, dl {
   }
   a.detail:hover {
     color: #494949;
-  }
-}
-
-/*** contacts ***/
-.contacts {
-  float: right;
-  position: relative;
-  bottom: -12px;
-
-  li {
-    float: left;
-    margin-left: 6px;
-
-    a {
-      display: block;
-      color: #666;
-      font-size: 20px;
-      font-family: 'fontello';
-
-      &:hover:before {
-        color: @font-color-default;
-      }
-
-      &.twitter:before {
-        content: '\e801';
-      }
-      &.github:before {
-        content: '\e800';
-      }
-      &.linkedin:before {
-        content: '\e802';
-      }
-      &.mail:before {
-        content: '\e803';
-      }
-    }
   }
 }
 

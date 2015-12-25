@@ -5,10 +5,11 @@ var Helper = {
     init: function () {
         Helper.redirect();
         Helper.fadeInContent();
+        Helper.bindLangSwitcher()
     },
 
     redirect: function () {
-        window.location.replace( window.location.origin + '#ru' );
+        window.location.replace( window.location.origin + '#en' );
     },
 
     fadeInContent: function () {
@@ -21,8 +22,19 @@ var Helper = {
 
             $(this).closest('.cbp_tmlabel').find('.details').toggleClass('hidden');
         })
-    }
+    },
 
+    initLangSwitcher: function (lang) {
+        var dataLang = (lang == 'ru') ? 'en' : 'ru';
+        $('#lang').html(dataLang)
+            .attr('data-lang', dataLang);
+    },
+
+    bindLangSwitcher: function () {
+        $('#lang').on('click', function () {
+            location.hash = $(this).attr('data-lang');
+        });
+    }
 };
 
 var App = (function () {
@@ -42,7 +54,6 @@ var App = (function () {
         },
 
         lang = false,
-        TMPdata = false,
         localeData = false,
         Template = {},
 
@@ -76,9 +87,7 @@ var App = (function () {
                 var path = config.path.templatesData + lang + '.json';
 
                 $.get(path, function(data){
-                    TMPdata = data;
-
-                    callback();
+                    callback(data);
                 });
             },
 
@@ -118,25 +127,19 @@ var App = (function () {
             },
 
             project: function() {
-                Get.TMPdata(function () {
-                    Render.content('project', {projects: TMPdata, locale: localeData[lang]});
+                Get.TMPdata(function (data) {
+                    Render.content('project', {projects: data, locale: localeData[lang]});
                 });
             }
         },
 
         initRouting = function () {
-            routie({
+            routie('*', function(route) {
+                lang = 'en'
+                if(route == 'en' || route == 'ru') lang = route;
 
-                'en': function() {
-                    lang = 'en';
-                    Render.project();
-                },
-
-                'ru': function() {
-                    lang = 'ru';
-                    Render.project();
-                }
-
+                Render.project();
+                Helper.initLangSwitcher(route);
             });
         };
 

@@ -50,7 +50,7 @@ input, textarea {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 }
-ol, ul {
+ol, ul, menu {
     list-style: none;
 }
 table {
@@ -390,6 +390,23 @@ dl {
   margin: 0 auto;
   padding: 0 1.875em 3.125em;
 }
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.icon-drop:before {
+  content: "\e000";
+}
+.icon-arrow-left:before {
+  content: "\f060";
+}
+.hidden {
+  display: none;
+}
 /*** header ***/
 .container > header {
   padding: 2.875em 1.875em 1.875em;
@@ -441,6 +458,78 @@ dl {
 .container > header nav a:hover {
   background: #47a3da;
 }
+/*** menu ***/
+menu {
+  float: right;
+  position: relative;
+  font-size: 14px;
+  bottom: -15px;
+}
+menu > li {
+  float: left;
+  margin-left: 10px;
+}
+menu > li > span {
+  float: left;
+  font-size: 9px;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+menu #lang {
+  float: right;
+  color: #fff;
+  width: 20px;
+  height: 19px;
+  font-size: 14px;
+  font-family: Lato-Bold, sans-serif;
+  text-align: center;
+  line-height: 122%;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 2px 0 0 3px;
+  background: #666;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+menu #lang:hover {
+  background: #414141;
+}
+menu .contacts {
+  float: right;
+}
+menu .contacts li {
+  float: left;
+  margin-left: 6px;
+}
+menu .contacts li a {
+  display: block;
+  color: #666;
+  font-size: 21px;
+  font-family: 'fontello';
+}
+menu .contacts li a:hover:before {
+  color: #414141;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+menu .contacts li a.twitter:before {
+  content: '\e801';
+}
+menu .contacts li a.github:before {
+  content: '\e800';
+}
+menu .contacts li a.linkedin:before {
+  content: '\e802';
+}
+menu .contacts li a.mail:before {
+  content: '\e803';
+}
 .icon-drop:before,
 .icon-arrow-left:before {
   font-family: 'fontawesome', sans-serif;
@@ -459,23 +548,6 @@ dl {
 }
 .container > header nav a:hover:before {
   color: #fff;
-}
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-.icon-drop:before {
-  content: "\e000";
-}
-.icon-arrow-left:before {
-  content: "\f060";
-}
-.hidden {
-  display: none;
 }
 /*****  realization  *****/
 .faw {
@@ -623,37 +695,6 @@ dl {
 }
 .buttons a.detail:hover {
   color: #494949;
-}
-/*** contacts ***/
-.contacts {
-  float: right;
-  position: relative;
-  bottom: -12px;
-}
-.contacts li {
-  float: left;
-  margin-left: 6px;
-}
-.contacts li a {
-  display: block;
-  color: #666;
-  font-size: 20px;
-  font-family: 'fontello';
-}
-.contacts li a:hover:before {
-  color: #414141;
-}
-.contacts li a.twitter:before {
-  content: '\e801';
-}
-.contacts li a.github:before {
-  content: '\e800';
-}
-.contacts li a.linkedin:before {
-  content: '\e802';
-}
-.contacts li a.mail:before {
-  content: '\e803';
 }
 /* Media Queries */
 @media screen and (max-width: 65.375em) {
