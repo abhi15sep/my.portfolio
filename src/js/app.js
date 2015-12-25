@@ -58,7 +58,6 @@ var App = (function () {
         Template = {},
 
         init = function () {
-
             Get.localeData(function() {
                 initRouting();
             });
@@ -93,7 +92,6 @@ var App = (function () {
 
             localeData: function (callback) {
                 $.get(config.path.localeData, function(data){
-
                     localeData = data;
                     callback();
                 });
@@ -135,7 +133,7 @@ var App = (function () {
 
         initRouting = function () {
             routie('*', function(route) {
-                lang = 'en'
+                lang = 'en';
                 if(route == 'en' || route == 'ru') lang = route;
 
                 Render.project();
