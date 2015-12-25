@@ -1,5 +1,13 @@
 <ul class="cbp_tmtimeline">
     {% for project in projects | reverse %}
+
+        {# get from involvement_duration months of involvement #}
+            {#{% set involvement_duration_month = 0 %}#}
+            {#{% for x in range(project.involvement_duration.start|date('U'), project.involvement_duration.finish|date('U'), 86400 ) %}#}
+                {#{% set involvement_duration_month = involvement_duration_month + 1 %}#}
+            {#{% endfor %}#}
+        {# /get from involvement_duration months of involvement #}
+
         <li>
             <time class="cbp_tmtime">
                 <span>
