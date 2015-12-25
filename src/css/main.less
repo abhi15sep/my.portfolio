@@ -179,19 +179,19 @@ menu {
     float: right;
     color: #fff;
     width: 20px;
-    height: 19px;
+    height: 18px;
     font-size: 14px;
     font-family: Lato-Bold, sans-serif;
     text-align: center;
-    line-height: 122%;
+    line-height: 120%;
     border-radius: 4px;
     cursor: pointer;
     margin: 2px 0 0 3px;
-    background: #666;
+    background: @font-color-default;
     .transition(.3s);
 
     &:hover {
-      background: @font-color-default;
+      background: #666;
     }
   }
 
@@ -204,12 +204,12 @@ menu {
 
       a {
         display: block;
-        color: #666;
+        color: @font-color-default;
         font-size: 21px;
         font-family: 'fontello';
 
         &:hover:before {
-          color: @font-color-default;
+          color: #666;
           .transition(.3s);
         }
 
@@ -399,23 +399,23 @@ menu {
 
 /*****  buttons  *****/
 .buttons {
-  margin-top: 25px;
+  margin-top: 20px;
 
   li {
     float: left;
     list-style-type: none;
-    margin-left: 10px;
+    margin: 5px 5px 0 0;
 
     &:first-child {
       margin-left: 0;
     }
   }
-  a.detail {
+  a {
     display: inline-block;
     outline: none;
 
   }
-  a.detail:hover {
+  a:hover {
     color: #494949;
   }
 }

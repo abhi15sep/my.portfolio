@@ -479,15 +479,15 @@ menu #lang {
   float: right;
   color: #fff;
   width: 20px;
-  height: 19px;
+  height: 18px;
   font-size: 14px;
   font-family: Lato-Bold, sans-serif;
   text-align: center;
-  line-height: 122%;
+  line-height: 120%;
   border-radius: 4px;
   cursor: pointer;
   margin: 2px 0 0 3px;
-  background: #666;
+  background: #414141;
   -webkit-transition: 0.3s all;
   -moz-transition: 0.3s all;
   -ms-transition: 0.3s all;
@@ -495,7 +495,7 @@ menu #lang {
   transition: 0.3s all;
 }
 menu #lang:hover {
-  background: #414141;
+  background: #666;
 }
 menu .contacts {
   float: right;
@@ -506,12 +506,12 @@ menu .contacts li {
 }
 menu .contacts li a {
   display: block;
-  color: #666;
+  color: #414141;
   font-size: 21px;
   font-family: 'fontello';
 }
 menu .contacts li a:hover:before {
-  color: #414141;
+  color: #666;
   -webkit-transition: 0.3s all;
   -moz-transition: 0.3s all;
   -ms-transition: 0.3s all;
@@ -679,21 +679,21 @@ menu .contacts li a.mail:before {
 }
 /*****  buttons  *****/
 .buttons {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .buttons li {
   float: left;
   list-style-type: none;
-  margin-left: 10px;
+  margin: 5px 5px 0 0;
 }
 .buttons li:first-child {
   margin-left: 0;
 }
-.buttons a.detail {
+.buttons a {
   display: inline-block;
   outline: none;
 }
-.buttons a.detail:hover {
+.buttons a:hover {
   color: #494949;
 }
 /** 404 ***/
