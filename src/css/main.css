@@ -696,6 +696,33 @@ menu .contacts li a.mail:before {
 .buttons a.detail:hover {
   color: #494949;
 }
+/** 404 ***/
+#page404 .error-box {
+  text-align: center;
+  margin-top: 100px;
+}
+#page404 .error-box li {
+  display: inline-block;
+}
+#page404 .error-box li.error {
+  font-size: 60px;
+  font-family: Lato-Bold, sans-serif;
+}
+#page404 .error-box li.message {
+  font-size: 19px;
+  font-family: Lato-Light, sans-serif;
+  vertical-align: top;
+  padding-top: 7px;
+  margin-left: 10px;
+}
+#page404 .error-box li.message span {
+  display: block;
+  font-size: 17px;
+  margin-top: 12px;
+}
+#page404 .error-box li.message a {
+  text-decoration: underline;
+}
 /* Media Queries */
 @media screen and (max-width: 65.375em) {
   .cbp_tmtimeline > li .cbp_tmtime span:last-child {

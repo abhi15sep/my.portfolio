@@ -16,6 +16,7 @@ var gulp = require('gulp'),
 
 var path = {
     src: { //path of source
+        htaccess: 'src/.htaccess',
         html: 'src/*.html',
         js: [
             './bower_components/jquery/dist/jquery.js',
@@ -35,6 +36,7 @@ var path = {
         favicon: 'src/favicon.png'
     },
     build: { //path of build
+        htaccess: 'build/',
         html: 'build/',
         js: 'build/js',
         css: 'build/css',
@@ -45,6 +47,7 @@ var path = {
         favicon: 'build/'
     },
     watch: { //see after
+        htaccess: 'src/.htaccess',
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         css: 'src/css/**/*.less',
@@ -56,6 +59,12 @@ var path = {
     },
     clean: './build'
 };
+
+//htaccess
+gulp.task('htaccess:build', function(){
+    gulp.src(path.src.htaccess)
+        .pipe(gulp.dest(path.build.htaccess))
+});
 
 //html
 gulp.task('html:build', function(){
@@ -120,6 +129,7 @@ gulp.task('data:build',function(){ // copy fonts from source to build
 });
 
 gulp.task('build', [ // building task
+    'htaccess:build',
     'html:build',
     'js:build',
     'css:build',
@@ -131,6 +141,9 @@ gulp.task('build', [ // building task
 ]);
 
 gulp.task('watch', function(event, cb){
+    watch([path.watch.htaccess], function(event, cb){
+        gulp.start('htaccess:build');
+    });
     watch([path.watch.html], function(event, cb){
         gulp.start('html:build');
     });
