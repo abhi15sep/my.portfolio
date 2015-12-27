@@ -178,15 +178,16 @@ menu {
   #lang {
     float: right;
     color: #fff;
-    width: 20px;
+    width: 19px;
     height: 18px;
     font-size: 14px;
-    font-family: Lato-Bold, sans-serif;
+    font-family: Lato-Bold,sans-serif;
     text-align: center;
-    line-height: 120%;
+    line-height: 16px;
     border-radius: 4px;
     cursor: pointer;
-    margin: 2px 0 0 3px;
+    padding-right: 1px;
+    margin: 1px 0 0 3px;
     background: @font-color-default;
     .transition(.3s);
 
@@ -502,6 +503,10 @@ menu {
 
   .cbp_tmtimeline > li .cbp_tmicon {
     display: none;
+  }
+
+  menu #lang {
+    padding-right: 0;
   }
 }
 
