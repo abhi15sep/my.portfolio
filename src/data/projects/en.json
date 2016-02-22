@@ -142,7 +142,7 @@
       "finish": "2015-12"
     },
     "role": ["frontend"],
-    "responsibilities": "Development of templates for the layout, development of js-scripts for routing, page generating, controllers",
+    "responsibilities": "Development of templates for the layout, development of js-scripts for routing, page generating, controllers, audioplayer, sound effects",
     "team_size": 3,
     "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "ajax", "twig", "symfony", "git"],
     "realization": ["desktop", "tablet"],
