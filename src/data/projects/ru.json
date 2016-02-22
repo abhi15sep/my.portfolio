@@ -135,19 +135,19 @@
   {
     "id": 8,
     "title": "Веб-приложение - система интернет-трейдинга на бирже Forex",
-    "description": "Система торговли для брокеров, торгующих на бирже Forex, с персональным кабинетом, статистикой, бонусами и счетами",
+    "description": "Система для брокеров, торгующих на бирже Forex, с персональным кабинетом, статистикой, бонусами и счетами",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-10",
       "finish": "2015-12"
     },
     "role": ["frontend"],
-    "responsibilities": "Разработка шаблонов для верстки, верстка макетов, разработка JS-сценариев - роутинг, генерация страниц, контроллеры",
+    "responsibilities": "Разработка шаблонов для верстки, верстка макетов, разработка JS-сценариев - роутинг, генерация страниц, контроллеры, аудиплеер, звуковые эффекты",
     "team_size": 3,
     "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "ajax", "twig", "symfony", "git"],
     "realization": ["desktop", "tablet"],
     "tools": ["JetBrains WebStorm", "Photoshop"],
-    "img": ["project_8-1.jpg", "project_8-2.jpg", "project_8-3.jpg", "project_8-4.jpg", "project_8-5.jpg", "project_8-6.jpg"],
+    "img": ["project_8-1.jpg", "project_8-2.jpg", "project_8-3.jpg", "project_8-4.jpg", "project_8-5.jpg", "project_8-6.jpg", "project_8-7.jpg"],
     "link": ""
   }
 ]
