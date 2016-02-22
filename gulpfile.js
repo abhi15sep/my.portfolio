@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
-    minifyCSS = require('gulp-minify-css'), // minify css
+    minifyCSS = require('gulp-cssnano'), // minify css
     prefixer = require('gulp-autoprefixer'), // prefix for browsers (-o, -moz)
     rename = require("gulp-rename"), // rename files
     concat = require('gulp-concat'), // concat js

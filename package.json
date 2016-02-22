@@ -22,5 +22,8 @@
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
     "rimraf": "*"
+  },
+  "dependencies": {
+    "gulp-cssnano": "^2.1.1"
   }
 }
