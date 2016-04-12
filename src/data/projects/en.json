@@ -139,7 +139,7 @@
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-10",
-      "finish": "2015-12"
+      "finish": "2016-04"
     },
     "role": ["frontend"],
     "responsibilities": "Development of templates for the layout, development of js-scripts for routing, page generating, controllers, audio player, sound effects",
