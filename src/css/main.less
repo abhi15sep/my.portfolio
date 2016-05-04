@@ -1,0 +1,512 @@
+@import (inline) "partials/reset.css";
+@import (inline) "partials/fonts.css";
+@import (inline) "partials/lightbox.css";
+
+
+@font-color-default: #414141;
+@border-color-default: rgba(65, 65, 65, 0.4);
+@border-color-triangle: rgba(65, 65, 65, 0.8);
+@border-color-timeline: #e1e1e1;
+@border-color-tmicon: #d2d2d2;
+
+/* default */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+}
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  color: @font-color-default;
+}
+
+a {
+  color: @font-color-default;
+
+  .transition(.3s);
+}
+
+a:hover {
+  color: #000;
+}
+
+p, dl {
+  display: block;
+  margin: 1em 0;
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  height: 27px;
+  font-family: 'Lato-Regular', sans-serif;
+  font-size: 0.7em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 25px;
+  padding: 0 15px;
+  border: 1px solid @font-color-default;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.main,
+.container > header {
+  width: 95%;
+  max-width: 69em;
+  margin: 0 auto;
+  padding: 0 1.875em 3.125em;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.icon-drop:before {
+  content: "\e000";
+}
+
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+.hidden {
+  display: none;
+}
+
+.transition(@time) {
+  -webkit-transition: @time all;
+  -moz-transition: @time all;
+  -ms-transition: @time all;
+  -o-transition: @time all;
+  transition: @time all;
+}
+
+/*** header ***/
+
+.container > header {
+  padding: 2.875em 1.875em 1.875em;
+
+  h1 {
+    font-size: 2.125em;
+    line-height: 1.3;
+    margin: 0;
+    float: left;
+    font-family: 'Lato-Regular', sans-serif;
+  }
+  .name {
+    display: block;
+    font-family: 'Lato-Bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    padding: 0 0 0.6em 0.1em;
+  }
+
+  nav {
+    float: right;
+
+    a {
+      display: block;
+      float: left;
+      position: relative;
+      width: 2.5em;
+      height: 2.5em;
+      background: #fff;
+      border-radius: 50%;
+      color: transparent;
+      margin: 0 0.1em;
+      border: 4px solid #47a3da;
+      text-indent: -8000px;
+
+      &:after {
+        content: attr(data-info);
+        color: #47a3da;
+        position: absolute;
+        width: 600%;
+        top: 120%;
+        text-align: right;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+      &:hover:after {
+        opacity: 1;
+      }
+      &:hover {
+        background: #47a3da;
+      }
+    }
+  }
+}
+
+/*** menu ***/
+menu {
+  float: right;
+  position: relative;
+  font-size: 14px;
+  bottom: -15px;
+
+  & > li {
+    float: left;
+    margin-left: 10px;
+
+    & > span {
+      float: left;
+      font-size: 9px;
+      text-transform: uppercase;
+      line-height: 24px;
+    }
+  }
+
+  #lang {
+    float: right;
+    color: #fff;
+    width: 19px;
+    height: 18px;
+    font-size: 14px;
+    font-family: Lato-Bold,sans-serif;
+    text-align: center;
+    line-height: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding-right: 1px;
+    margin: 2px 0 0 3px;
+    background: @font-color-default;
+    .transition(.3s);
+
+    &:hover {
+      background: #666;
+    }
+  }
+
+  .contacts {
+    float: right;
+
+    li {
+      float: left;
+      margin-left: 6px;
+
+      a {
+        display: block;
+        color: @font-color-default;
+        font-size: 21px;
+        font-family: 'fontello';
+
+        &:hover:before {
+          color: #666;
+          .transition(.3s);
+        }
+
+        &.twitter:before {
+          content: '\e801';
+        }
+        &.github:before {
+          content: '\e800';
+        }
+        &.linkedin:before {
+          content: '\e802';
+        }
+        &.mail:before {
+          content: '\e803';
+        }
+      }
+    }
+  }
+}
+
+.icon-drop:before,
+.icon-arrow-left:before {
+  font-family: 'fontawesome', sans-serif;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2;
+  text-align: center;
+  color: #47a3da;
+  -webkit-font-smoothing: antialiased;
+  text-indent: 8000px;
+  padding-left: 8px;
+}
+
+.container > header nav a:hover:before {
+  color: #fff;
+}
+
+/*****  realization  *****/
+.faw {
+  font-size: 18px;
+  letter-spacing: 6px;
+  margin-top: 2px;
+}
+.fa {
+  display: inline-block;
+  font-family: 'fontawesome', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  &.fa-desktop::before {
+    content: "";
+  }
+  &.fa-tablet::before {
+    content: "";
+  }
+  &.fa-mobile-phone::before,
+  &.fa-mobile::before {
+    content: "";
+  }
+}
+
+
+
+.cbp_tmtimeline {
+  margin: 30px 0 0 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+/* The line */
+.cbp_tmtimeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: @border-color-timeline;
+  left: 22%;
+  margin-left: -22px;
+}
+
+/* The date/time */
+.cbp_tmtimeline > li .cbp_tmtime {
+  display: block;
+  width: 25%;
+  padding-right: 100px;
+  position: absolute;
+  top: 42px;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span {
+  display: block;
+  text-align: right;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+  font-size: 2.0em;
+  color: @font-color-default;
+}
+
+
+/* Right content */
+.cbp_tmtimeline > li {
+  position: relative;
+}
+.cbp_tmtimeline > li .cbp_tmlabel {
+  margin: 0 0 15px 25%;
+  color: @font-color-default;
+  padding: 2em;
+  font-size: 1.2em;
+  font-family: 'Lato-Light', sans-serif;
+  line-height: 1.4;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid @border-color-default;
+
+  h2 {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid @border-color-default;
+  }
+
+  dl {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+
+    dt {
+      position: relative;
+      top: 3px;
+      font-family: Lato-Light, sans-serif;
+      font-size: .8em;
+      text-transform: lowercase;
+      padding-right: 10px;
+    }
+    dd {
+      font-family: Lato-Regular, sans-serif;
+      font-size: .8em;
+      text-transform: uppercase;
+      margin-left: 40px;
+
+      &.text {
+        text-transform: none;
+      }
+    }
+  }
+  .role,
+  .web-tech {
+    font-size: 13px;
+  }
+}
+
+/* The triangle */
+.cbp_tmtimeline > li .cbp_tmlabel:after {
+  display: none;
+  right: 100%;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: 10px solid transparent;
+  border-right-color: @border-color-tmicon;
+  top: 48px;
+}
+
+
+/* The icons */
+.cbp_tmtimeline > li .cbp_tmicon {
+  content: " ";
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  pointer-events: none;
+  left: 22%;
+  top: 52px;
+  margin: 0 0 0 -25px;
+  background: @border-color-tmicon;
+}
+
+/*****  buttons  *****/
+.buttons {
+  margin-top: 20px;
+
+  li {
+    float: left;
+    list-style-type: none;
+    margin: 5px 5px 0 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a {
+    display: inline-block;
+    outline: none;
+
+  }
+  a:hover {
+    color: #494949;
+  }
+}
+
+/** 404 ***/
+#page404 {
+
+
+  .error-box {
+    text-align: center;
+    margin-top: 100px;
+
+    li {
+      display: inline-block;
+
+      &.error {
+        font-size: 60px;
+        font-family: Lato-Bold, sans-serif;
+      }
+
+      &.message {
+        font-size: 19px;
+        font-family: Lato-Light,sans-serif;
+        vertical-align: top;
+        padding-top: 7px;
+        margin-left: 10px;
+
+        span {
+          display: block;
+          font-size: 17px;
+          margin-top: 12px;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 65.375em) {
+
+  .cbp_tmtimeline > li .cbp_tmtime span:last-child {
+    font-size: 1.7em;
+  }
+  .cbp_tmtimeline > li .cbp_tmtime {
+    top: 44px;
+  }
+}
+
+@media screen and (max-width: 47.2em) {
+  .cbp_tmtimeline:before {
+    display: none;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmtime {
+    width: 100%;
+    position: relative;
+    padding: 0 0 20px 0;
+    top: 0;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmtime span {
+    text-align: left;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmlabel {
+    margin: 0 0 30px 0;
+    padding: 1em;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 95%;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmlabel:after {
+    display: block;
+    right: auto;
+    left: 20px;
+    border-right-color: transparent;
+    border-bottom-color: @border-color-triangle;
+    top: -20px;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmicon {
+    display: none;
+  }
+
+  menu #lang {
+    padding-right: 0;
+  }
+}
+
