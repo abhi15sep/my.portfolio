@@ -134,8 +134,8 @@
 
   {
     "id": 8,
-    "title": "Веб-приложение - система интернет-трейдинга на бирже Forex",
-    "description": "Система для брокеров, торгующих на бирже Forex, с персональным кабинетом, статистикой, бонусами и счетами",
+    "title": "Веб-приложение Intrade24 - система интернет-трейдинга на бирже Forex",
+    "description": "Система Intrade24 для брокеров, торгующих на бирже Forex, с персональным кабинетом, статистикой, бонусами и счетами",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-10",
@@ -144,10 +144,29 @@
     "role": ["frontend"],
     "responsibilities": "Разработка шаблонов для верстки, верстка макетов, разработка JS-сценариев - роутинг, генерация страниц, контроллеры, аудиплеер, звуковые эффекты",
     "team_size": 3,
-    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "ajax", "twig", "symfony", "git"],
+    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "jquery-ui", "ajax", "twig", "symfony", "git"],
     "realization": ["desktop", "tablet"],
-    "tools": ["JetBrains WebStorm", "Photoshop"],
+    "tools": ["JetBrains PHPStorm", "Photoshop"],
     "img": ["project_8-1.jpg", "project_8-2.jpg", "project_8-3.jpg", "project_8-4.jpg", "project_8-5.jpg", "project_8-6.jpg", "project_8-7.jpg"],
     "link": "http://intrade24.com/"
+  },
+
+  {
+    "id": 9,
+    "title": "Веб-приложение Pay4User - система для выдачи кредитов в Webmoney",
+    "description": "Система Pay4User предназначена для кредитования в платежной системе Webmoney",
+    "customer": "ukraine",
+    "involvement_duration": {
+      "start": "2016-04",
+      "finish": "2016-06"
+    },
+    "role": ["frontend"],
+    "responsibilities": "Разработка шаблонов для верстки, верстка макетов, разработка JS-сценариев - роутинг, генерация страниц, контроллеры, аудиплеер",
+    "team_size": 3,
+    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "jquery-ui", "ajax", "twig", "silex", "git"],
+    "realization": ["desktop"],
+    "tools": ["JetBrains PHPStorm", "Photoshop"],
+    "img": ["project_9-1.jpg", "project_9-2.jpg"],
+    "link": ""
   }
 ]

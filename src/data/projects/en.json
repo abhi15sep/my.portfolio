@@ -134,8 +134,8 @@
 
   {
     "id": 8,
-    "title": "Web application - system of online trading in the Forex market",
-    "description": "System for brokers who trade on the Forex stock exchange, with personal pages, statistics, scores, accounts and bonuses",
+    "title": "Web application Intrade24 - system of online trading in the Forex market",
+    "description": "System Intrade24 for brokers who trade on the Forex stock exchange, with personal pages, statistics, scores, accounts and bonuses",
     "customer": "ukraine",
     "involvement_duration": {
       "start": "2015-10",
@@ -144,10 +144,29 @@
     "role": ["frontend"],
     "responsibilities": "Development of templates for the layout, development of js-scripts for routing, page generating, controllers, audio player, sound effects",
     "team_size": 3,
-    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "ajax", "twig", "symfony", "git"],
+    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "jquery-ui", "ajax", "twig", "symfony", "git"],
     "realization": ["desktop", "tablet"],
-    "tools": ["JetBrains WebStorm", "Photoshop"],
+    "tools": ["JetBrains PHPStorm", "Photoshop"],
     "img": ["project_8-1.jpg", "project_8-2.jpg", "project_8-3.jpg", "project_8-4.jpg", "project_8-5.jpg", "project_8-6.jpg", "project_8-7.jpg"],
     "link": "http://intrade24.com/"
+  },
+
+  {
+    "id": 9,
+    "title": "Web application Pay4User - system of granting loans with the Webmoney",
+    "description": "System Pay4User is designed for lending with the Webmoney",
+    "customer": "ukraine",
+    "involvement_duration": {
+      "start": "2016-04",
+      "finish": "2016-06"
+    },
+    "role": ["frontend"],
+    "responsibilities": "Development of templates for the layout, development of js-scripts for routing, page generating, controllers, audio player",
+    "team_size": 3,
+    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "jquery-ui", "ajax", "twig", "silex", "git"],
+    "realization": ["desktop"],
+    "tools": ["JetBrains PHPStorm", "Photoshop"],
+    "img": ["project_9-1.jpg", "project_9-2.jpg"],
+    "link": ""
   }
 ]
