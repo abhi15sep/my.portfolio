@@ -30,7 +30,7 @@
     "role": ["frontend"],
     "responsibilities": "Имплементация переводов в приложение, правка стилей, исправление ошибок логики и отображения приложения, тестирование",
     "team_size": 5,
-    "technologies": ["html5", "css3", "bootstrap", "javascript", "jquery", "jqueryMobile", "jquery UI", "backbone", "require.js", "yaml", "git" ],
+    "technologies": ["html5", "css3", "bootstrap", "javascript", "jquery", "jqueryMobile", "jquery UI", "backbone.js", "require.js", "yaml", "git" ],
     "realization": ["tablet"],
     "tools": ["JetBrains WebStorm", "Photoshop"],
     "img": [],
