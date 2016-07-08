@@ -195,8 +195,8 @@
     "description": "Info landing-page about creative agency and its services",
     "customer": "ukraine",
     "involvement_duration": {
-      "start": "2015-06",
-      "finish": "2015-07"
+      "start": "2015-07",
+      "finish": "2015-08"
     },
     "role": ["frontend"],
     "responsibilities": "Application structure and functional development",
