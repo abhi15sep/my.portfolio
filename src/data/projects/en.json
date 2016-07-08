@@ -168,5 +168,43 @@
     "tools": ["JetBrains PHPStorm", "Photoshop"],
     "img": ["project_9-1.jpg", "project_9-2.jpg"],
     "link": ""
+  },
+
+  {
+    "id": 10,
+    "title": "Exaloc — web platform for betting on sporting events",
+    "description": "Web platform is designed for the implementation of a series of bets on sporting events in the world. Used in Europe and Africa",
+    "customer": "europe",
+    "involvement_duration": {
+      "start": "2016-06",
+      "finish": "2016-07"
+    },
+    "role": ["frontend"],
+    "responsibilities": "Design of sub-modules, back-end coding, implementation of UI design",
+    "team_size": 4,
+    "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "silex", "twig", "git"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains PHPStorm"],
+    "img": [],
+    "link": ""
+  },
+
+  {
+    "id": 11,
+    "title": "Whale Creative Agency landing page",
+    "description": "Info landing-page about creative agency and its services",
+    "customer": "ukraine",
+    "involvement_duration": {
+      "start": "2015-06",
+      "finish": "2015-07"
+    },
+    "role": ["frontend"],
+    "responsibilities": "Application structure and functional development",
+    "team_size": 4,
+    "technologies": ["html5", "css3", "less", "javascript", "react.js", "webpack", "git"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains WebStorm"],
+    "img": [],
+    "link": ""
   }
 ]

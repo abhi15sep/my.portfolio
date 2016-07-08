@@ -152,21 +152,59 @@
   },
 
   {
-    "id": 9,
-    "title": "Веб-приложение Pay4User - система для выдачи кредитов в Webmoney",
-    "description": "Система Pay4User предназначена для кредитования в платежной системе Webmoney",
-    "customer": "ukraine",
+  "id": 9,
+  "title": "Веб-приложение Pay4User - система для выдачи кредитов в Webmoney",
+  "description": "Система Pay4User предназначена для кредитования в платежной системе Webmoney",
+  "customer": "ukraine",
+  "involvement_duration": {
+    "start": "2016-04",
+    "finish": "2016-06"
+  },
+  "role": ["frontend"],
+  "responsibilities": "Разработка шаблонов для верстки, верстка макетов, разработка JS-сценариев - роутинг, генерация страниц, контроллеры, аудиплеер",
+  "team_size": 3,
+  "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "jquery-ui", "ajax", "twig", "silex", "git"],
+  "realization": ["desktop"],
+  "tools": ["JetBrains PHPStorm", "Photoshop"],
+  "img": ["project_9-1.jpg", "project_9-2.jpg"],
+  "link": ""
+  },
+
+  {
+    "id": 10,
+    "title": "Exaloc – веб-платформа для ставок на спортивные события",
+    "description": "Веб-платформа предназначенная для осуществления ставок на ряд спортивныx событий в мире. Используется в странах Европы и Африки.",
+    "customer": "europe",
     "involvement_duration": {
-      "start": "2016-04",
-      "finish": "2016-06"
+      "start": "2015-06",
+      "finish": "2015-07"
     },
     "role": ["frontend"],
-    "responsibilities": "Разработка шаблонов для верстки, верстка макетов, разработка JS-сценариев - роутинг, генерация страниц, контроллеры, аудиплеер",
-    "team_size": 3,
-    "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "jquery-ui", "ajax", "twig", "silex", "git"],
-    "realization": ["desktop"],
-    "tools": ["JetBrains PHPStorm", "Photoshop"],
-    "img": ["project_9-1.jpg", "project_9-2.jpg"],
+    "responsibilities": "Дизайн суб-модулей, back-end кодирование, имплементация UI дизайна",
+    "team_size": 4,
+    "technologies": ["html5", "css3", "less", "javascript", "jquery", "ajax", "php", "silex", "twig", "git"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains PHPStorm"],
+    "img": [],
+    "link": ""
+  },
+
+  {
+    "id": 11,
+    "title": "Whale Creative Agency landing page",
+    "description": "Лендинг-пейдж для агенции вебдизайна и разработки",
+    "customer": "ukraine",
+    "involvement_duration": {
+      "start": "2015-06",
+      "finish": "2015-07"
+    },
+    "role": ["frontend"],
+    "responsibilities": "Полная разработка логического и визуального функционала",
+    "team_size": 4,
+    "technologies": ["html5", "css3", "less", "javascript", "react.js", "webpack", "git"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["JetBrains WebStorm"],
+    "img": [],
     "link": ""
   }
 ]
