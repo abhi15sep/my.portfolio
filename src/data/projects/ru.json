@@ -200,7 +200,7 @@
     },
     "role": ["frontend"],
     "responsibilities": "Полная разработка логического и визуального функционала",
-    "team_size": 4,
+    "team_size": 1,
     "technologies": ["html5", "css3", "less", "javascript", "react.js", "webpack", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains WebStorm"],
