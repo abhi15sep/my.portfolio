@@ -3,9 +3,9 @@
 var Helper = {
 
     init: function () {
-        Helper.redirect();
+        // Helper.redirect();
         Helper.fadeInContent();
-        Helper.bindLangSwitcher()
+        // Helper.bindLangSwitcher()
     },
 
     redirect: function () {
@@ -40,6 +40,7 @@ var Helper = {
 var App = (function () {
 
     var config = {
+            lang: 'ru',
             path: {
                 templates: './view/',
                 templatesData: './data/projects/',
@@ -53,7 +54,6 @@ var App = (function () {
             }
         },
 
-        lang = false,
         localeData = false,
         Template = {},
 
@@ -83,7 +83,7 @@ var App = (function () {
         Get = {
 
             TMPdata: function (callback) {
-                var path = config.path.templatesData + lang + '.json';
+                var path = config.path.templatesData + config.lang + '.json';
 
                 $.get(path, function(data){
                     callback(data);
@@ -126,18 +126,18 @@ var App = (function () {
 
             project: function() {
                 Get.TMPdata(function (data) {
-                    Render.content('project', {projects: data, locale: localeData[lang]});
+                    Render.content('project', {projects: data, locale: localeData[config.lang]});
                 });
             }
         },
 
         initRouting = function () {
             routie('*', function(route) {
-                lang = 'en';
-                if(route == 'en' || route == 'ru') lang = route;
+                // lang = 'en';
+                // if(route === 'en' || route === 'ru') lang = route;
 
                 Render.project();
-                Helper.initLangSwitcher(route);
+                // Helper.initLangSwitcher(route);
             });
         };
 
