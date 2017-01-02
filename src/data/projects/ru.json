@@ -14,7 +14,7 @@
     "technologies": ["html5", "css3", "javascript", "jquery", "twig", "json", "git" ],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains WebStorm", "Photoshop"],
-    "img": ["project_1-1.jpg", "project_1-2.jpg", "project_1-3.jpg", "project_1-4.jpg", "project_1-5.png", "project_1-6.png", "project_1-7.png", "project_1-8.png", "project_1-9.png", "project_1-10.png", "project_1-11.png"],
+    "imgs": ["project_1-1.jpg", "project_1-2.jpg", "project_1-3.jpg", "project_1-4.jpg", "project_1-5.png", "project_1-6.png", "project_1-7.png", "project_1-8.png", "project_1-9.png", "project_1-10.png", "project_1-11.png"],
     "link": "http://maplemap.github.io/page.vostok-record"
   },
 
@@ -33,7 +33,7 @@
     "technologies": ["html5", "css3", "bootstrap", "javascript", "jquery", "jqueryMobile", "jquery UI", "backbone.js", "require.js", "yaml", "git" ],
     "realization": ["tablet"],
     "tools": ["JetBrains WebStorm", "Photoshop"],
-    "img": [],
+    "imgs": [],
     "link": ""
   },
 
@@ -52,7 +52,7 @@
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "mysql", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm", "Photoshop"],
-    "img": ["project_3-1.jpg", "project_3-2.jpg", "project_3-3.png", "project_3-4.png"],
+    "imgs": ["project_3-1.jpg", "project_3-2.jpg", "project_3-3.png", "project_3-4.png"],
     "link": ""
   },
 
@@ -71,7 +71,7 @@
     "technologies": ["html5", "css3", "javascript", "jquery", "ajax", "php", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
-    "img": [],
+    "imgs": [],
     "link": "http://www.bidon-games.com/"
   },
 
@@ -90,7 +90,7 @@
     "technologies": ["html5", "css3", "less", "javascript", "jquery", "ajax", "php", "silex", "twig", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm"],
-    "img": [],
+    "imgs": [],
     "link": ""
   },
 
@@ -109,7 +109,7 @@
     "technologies": ["html5", "css3", "less", "javascript", "jquery", "ajax", "php", "symphony", "twig", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm", "Photoshop"],
-    "img": ["project_6-1.png", "project_6-2.png", "project_6-3.png", "project_6-4.png", "project_6-5.png", "project_6-6.png", "project_6-7.png", "project_6-8.png", "project_6-9.png", "project_6-10.png"],
+    "imgs": ["project_6-1.png", "project_6-2.png", "project_6-3.png", "project_6-4.png", "project_6-5.png", "project_6-6.png", "project_6-7.png", "project_6-8.png", "project_6-9.png", "project_6-10.png"],
     "link": "http://www.artel-outsourcing.com/"
   },
 
@@ -128,7 +128,7 @@
     "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "node.js", "express", "socket.io", "mongoDB", "twig", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains WebStorm"],
-    "img": [],
+    "imgs": [],
     "link": ""
   },
 
@@ -147,7 +147,7 @@
     "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "jquery-ui", "ajax", "twig", "symfony", "git"],
     "realization": ["desktop", "tablet"],
     "tools": ["JetBrains PHPStorm", "Photoshop"],
-    "img": ["project_8-1.jpg", "project_8-2.jpg", "project_8-3.jpg", "project_8-4.jpg", "project_8-5.jpg", "project_8-6.jpg", "project_8-7.jpg"],
+    "imgs": ["project_8-1.jpg", "project_8-2.jpg", "project_8-3.jpg", "project_8-4.jpg", "project_8-5.jpg", "project_8-6.jpg", "project_8-7.jpg"],
     "link": "http://intrade24.com/"
   },
 
@@ -166,7 +166,7 @@
   "technologies": ["html5", "css3", "less", "bower", "gulp", "javascript", "jquery", "jquery-ui", "ajax", "twig", "silex", "git"],
   "realization": ["desktop"],
   "tools": ["JetBrains PHPStorm", "Photoshop"],
-  "img": ["project_9-1.jpg", "project_9-2.jpg"],
+  "imgs": ["project_9-1.jpg", "project_9-2.jpg"],
   "link": ""
   },
 
@@ -176,8 +176,8 @@
     "description": "Веб-платформа предназначенная для осуществления ставок на ряд спортивныx событий в мире. Используется в странах Европы и Африки.",
     "customer": "europe",
     "involvement_duration": {
-      "start": "2015-06",
-      "finish": "2015-07"
+      "start": "2016-06",
+      "finish": "2016-07"
     },
     "role": ["frontend"],
     "responsibilities": "Дизайн суб-модулей, back-end кодирование, имплементация UI дизайна",
@@ -185,7 +185,7 @@
     "technologies": ["html5", "css3", "less", "javascript", "jquery", "ajax", "php", "silex", "twig", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains PHPStorm", "Photoshop"],
-    "img": [],
+    "imgs": [],
     "link": ""
   },
 
@@ -195,8 +195,8 @@
     "description": "Лендинг-пейдж для агенции вебдизайна и разработки",
     "customer": "ukraine",
     "involvement_duration": {
-      "start": "2015-07",
-      "finish": "2015-08"
+      "start": "2016-07",
+      "finish": "2016-08"
     },
     "role": ["frontend"],
     "responsibilities": "Полная разработка логического и визуального функционала",
@@ -204,7 +204,7 @@
     "technologies": ["html5", "css3", "less", "BEM", "JS ES6", "react.js", "webpack", "git"],
     "realization": ["desktop", "tablet"],
     "tools": ["Atom", "Sketch"],
-    "img": ["project_11-1.jpg", "project_11-2.jpg", "project_11-3.jpg", "project_11-4.jpg", "project_11-5.jpg", "project_11-6.jpg", "project_11-7.jpg"],
+    "imgs": ["project_11-1.jpg", "project_11-2.jpg", "project_11-3.jpg", "project_11-4.jpg", "project_11-5.jpg", "project_11-6.jpg", "project_11-7.jpg"],
     "link": ""
   },
 
@@ -214,8 +214,8 @@
     "description": "Презентация профессиональной вспышки для врачей-стоматологов и стоматологичских кабинетов",
     "customer": "ukraine",
     "involvement_duration": {
-      "start": "2015-09",
-      "finish": "2015-10"
+      "start": "2016-09",
+      "finish": "2016-10"
     },
     "role": ["frontend"],
     "responsibilities": "Разработка логического и визуального функционала, роутинг, динамические сценарии",
@@ -223,7 +223,45 @@
     "technologies": ["html5", "css3", "less", "BEM", "JS ES6", "webpack", "git"],
     "realization": ["desktop", "tablet", "mobile"],
     "tools": ["Atom", "Sketch"],
-    "img": ["project_12-1.jpg", "project_12-2.jpg", "project_12-3.jpg", "project_12-4.jpg", "project_12-5.jpg", "project_12-6.jpg", "project_12-7.jpg", "project_12-7.jpg", "project_12-8.jpg", "project_12-9.jpg", "project_12-10.jpg", "project_12-11.jpg", "project_12-12.jpg", "project_12-13.jpg", "project_12-14.jpg", "project_12-15.jpg"],
+    "imgs": ["project_12-1.jpg", "project_12-2.jpg", "project_12-3.jpg", "project_12-4.jpg", "project_12-5.jpg", "project_12-6.jpg", "project_12-7.jpg", "project_12-7.jpg", "project_12-8.jpg", "project_12-9.jpg", "project_12-10.jpg", "project_12-11.jpg", "project_12-12.jpg", "project_12-13.jpg", "project_12-14.jpg", "project_12-15.jpg"],
     "link": "http://dentalflash.net/"
+  },
+
+  {
+    "id": 13,
+    "title": "Websoccer - футбольный веб-симулятор",
+    "description": "Веб-приложение для симуляции игры в футбол. Менеджмент собственного клуба - трасферы, тренировки, покупка, продажа футбольной недвижимости, международная лига и кубки",
+    "customer": "russia",
+    "involvement_duration": {
+      "start": "2016-09",
+      "finish": "2016-12"
+    },
+    "role": ["frontend"],
+    "responsibilities": "Разработка визуальной темы для симулятора, логика визуального функционала",
+    "team_size": 4,
+    "technologies": ["html5", "css3", "less", "JS", "jQuery", "PHP", "git"],
+    "realization": ["desktop", "tablet"],
+    "tools": ["Atom", "Adobe Photoshop"],
+    "imgs": [],
+    "link": ""
+  },
+
+  {
+    "id": 14,
+    "title": "jquery.autoscroll-text-tape - плагин для горизонтального автоскроллинга текста",
+    "description": "jQuery-плагин для горизонтального беспрырывного автоскроллинга текста. Отслеживает ширину контейнера текста и если контейнер становится меньше ширины текста, текст начинает автоматически скроллится горизонтально - в одну сторону, потом в другую. Работа плагина опциональна настраиваема",
+    "customer": "own",
+    "involvement_duration": {
+      "start": "2016-12",
+      "finish": "2016-12"
+    },
+    "role": ["frontend"],
+    "responsibilities": "Полная разработка",
+    "team_size": 1,
+    "technologies": ["html5", "css3", "less", "JS ES6", "jQuery", "webpack", "git"],
+    "realization": ["desktop", "tablet", "mobile"],
+    "tools": ["Atom"],
+    "imgs": [],
+    "link": ""
   }
 ]
