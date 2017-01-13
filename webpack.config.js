@@ -94,10 +94,6 @@ module.exports = {
         exclude: [/node_modules/, /public/, /src\/img/]
       },
       {
-        test: /\.json$/,
-        use: 'json-loader'
-      },
-      {
         test: /\.(js|jsx)$/,
         use: [
           {
@@ -105,6 +101,7 @@ module.exports = {
             options: {
               presets: [
                 'react',
+                'stage-2',
                 ['es2015', { modules: false }]
               ]
             }
@@ -136,11 +133,11 @@ module.exports = {
   },
 
   plugins: [
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor',
-    //   minChunks: Infinity,
-    //   filename: 'vendor.bundle.js'
-    // }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: Infinity,
+      filename: 'vendor.bundle.js'
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(NODE_ENV)
