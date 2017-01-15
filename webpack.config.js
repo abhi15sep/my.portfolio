@@ -4,12 +4,13 @@ const autoprefixer = require('autoprefixer');
 const mixins = require('postcss-mixins');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
+const nodeEnv = process.env.NODE_ENV || 'development';
+const isProd = nodeEnv === 'production';
 const NODE_HOST = process.env.NODE_HOST || '0.0.0.0';
 const NODE_PORT = process.env.NODE_PORT || 8090;
 
 function getEntrySources(sources) {
-  if (NODE_ENV !== 'production') {
+  if (!isProd) {
     sources.unshift('react-hot-loader/patch');
     sources.unshift(`webpack-dev-server/client?http://${NODE_HOST}:${NODE_PORT}`);
     sources.unshift('webpack/hot/only-dev-server');
@@ -20,6 +21,7 @@ function getEntrySources(sources) {
 
 
 module.exports = {
+  devtool: isProd ? 'hidden-source-map' : 'cheap-eval-source-map',
   entry: {
     js: getEntrySources(['./src/main.js']),
     vendor: [
@@ -28,6 +30,7 @@ module.exports = {
       'react-tap-event-plugin',
       'react-router',
       'redux',
+      'react-router-redux',
       'redux-thunk',
       'react-redux',
       'keymirror',
@@ -37,7 +40,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/public/build/'),
-    publicPath: (NODE_ENV === 'production') ? './' : '/build/',
+    publicPath: isProd ? './' : '/build/',
     filename: 'bundle.js',
     chunkFilename: '[name].bundle.js'
   },
@@ -47,7 +50,9 @@ module.exports = {
   },
 
   performance: {
-    hints: NODE_ENV === 'production'
+    maxAssetSize: 100,
+    maxInitialChunkSize: 300,
+    hints: isProd
   },
 
   module: {
@@ -60,14 +65,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: (NODE_ENV === 'production')
+        use: isProd
                     ? ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' })
                     : 'style-loader!css-loader',
         exclude: [/node_modules/, /public/]
       },
       {
         test: /\.less$/,
-        use: (NODE_ENV === 'production')
+        use: isProd
                     ? ExtractTextPlugin.extract({ fallbackLoader: 'style-loader',
                       loader: [
                         {
@@ -139,15 +144,13 @@ module.exports = {
       filename: 'vendor.bundle.js'
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(NODE_ENV)
-      }
+      'process.env': { NODE_ENV: JSON.stringify(nodeEnv) }
     }),
     new webpack.NoErrorsPlugin()
   ]
 };
 
-if (NODE_ENV === 'production') {
+if (isProd) {
   const productionPlugins = [
     new webpack.LoaderOptionsPlugin({
       minimize: true,
