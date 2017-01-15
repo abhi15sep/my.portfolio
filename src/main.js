@@ -18,7 +18,7 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <RootRoutes />
+    <RootRoutes store={store} />
   </Provider>,
   document.getElementById('main')
 );

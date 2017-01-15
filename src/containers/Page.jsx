@@ -21,10 +21,13 @@ class Page extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
   const { projects } = state;
 
-  return projects;
+  return {
+    projects,
+    ownProps
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -32,9 +35,5 @@ function mapDispatchToProps(dispatch) {
     actions: bindActionCreators(ProjectActions, dispatch)
   };
 }
-
-// Page.contextTypes = {
-//   router: React.PropTypes.object.isRequired
-// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Page);

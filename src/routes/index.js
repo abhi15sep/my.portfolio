@@ -1,12 +1,18 @@
 import React from 'react';
 import { Router, Route, Redirect, IndexRedirect, browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+
 
 import App from '../containers/App';
 import Page from '../containers/Page';
 import Page404 from '../components/Page404';
 
-const RootRoutes = () => (
-  <Router history={browserHistory}>
+function getHistorySyncWithStore(store) {
+  return syncHistoryWithStore(browserHistory, store);
+}
+
+const RootRoutes = ({ store }) => (
+  <Router history={getHistorySyncWithStore(store)}>
     <Route path="/" component={App}>
       <IndexRedirect to="ru" />
       <Route path="/en" component={Page} />
