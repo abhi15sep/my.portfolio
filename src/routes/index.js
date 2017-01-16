@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Redirect, IndexRedirect, browserHistory } from 'react-router';
+import { Router, Route, Redirect, IndexRedirect, hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 
@@ -8,7 +8,7 @@ import ProjectsPage from '../containers/ProjectsPage';
 import Page404 from '../components/Page404';
 
 function getHistorySyncWithStore(store) {
-  return syncHistoryWithStore(browserHistory, store);
+  return syncHistoryWithStore(hashHistory, store);
 }
 
 const RootRoutes = ({ store }) => (
