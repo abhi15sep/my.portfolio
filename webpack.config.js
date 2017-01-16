@@ -33,9 +33,9 @@ module.exports = {
       'react-router-redux',
       'redux-thunk',
       'react-redux',
-      'keymirror',
       'axios',
-      'react-slick'
+      'react-slick',
+      'react-redux-spinner'
     ]
   },
   output: {
@@ -50,8 +50,8 @@ module.exports = {
   },
 
   performance: {
-    maxAssetSize: 100,
-    maxInitialChunkSize: 300,
+    // maxAssetSize: 100,
+    // maxInitialChunkSize: 300,
     hints: isProd
   },
 
@@ -60,30 +60,21 @@ module.exports = {
       {
         test: /\.jsx?$/,
         enforce: 'pre',
-        loaders: ['eslint-loader'],
+        use: ['eslint-loader'],
         include: path.join(__dirname, 'src')
       },
       {
         test: /\.css$/,
-        use: isProd
+        loader: isProd
                     ? ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' })
-                    : 'style-loader!css-loader',
-        exclude: [/node_modules/, /public/]
+                    : ['style-loader', 'css-loader']
       },
       {
         test: /\.less$/,
-        use: isProd
+        loader: isProd
                     ? ExtractTextPlugin.extract({ fallbackLoader: 'style-loader',
-                      loader: [
-                        {
-                          loader: 'css-loader'
-                        },
-                        {
-                          loader: 'less-loader'
-                        }
-                      ] })
-                    : 'style-loader!css-loader!less-loader',
-        exclude: [/node_modules/, /public/]
+                      loader: ['css-loader', 'less-loader'] })
+                    : ['style-loader', 'css-loader', 'less-loader']
       },
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,

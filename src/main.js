@@ -13,7 +13,6 @@ if (module.hot) {
 
 injectTapEventPlugin();
 
-
 const store = configureStore();
 
 ReactDOM.render(

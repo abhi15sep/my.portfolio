@@ -2,29 +2,28 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import ProjectActions from '../actions/ProjectsActions';
+import ProjectsPageActions from '../actions/ProjectsPageActions';
 
 
 class Page extends React.Component {
   componentWillMount() {
-    const lang = this.props.location.pathname.replace('/', '');
-
-    const { actions } = this.props;
-    actions.getProjects(lang);
+    this.props.actions.getLocaleData(this.props.locale.language);
   }
 
   render() {
-    console.log(this.props);
     return (
-      <div className="projects">2323</div>
+      <div>
+        <div className="projects">2323</div>
+      </div>
     );
   }
 }
 
 function mapStateToProps(state, ownProps) {
-  const { projects } = state;
+  const { projects, locale } = state;
 
   return {
+    locale,
     projects,
     ownProps
   };
@@ -32,7 +31,7 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(ProjectActions, dispatch)
+    actions: bindActionCreators(ProjectsPageActions, dispatch)
   };
 }
 
