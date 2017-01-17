@@ -6,9 +6,6 @@ import ProjectsActions from '../actions/ProjectsActions';
 
 
 class Page extends React.Component {
-  componentWillMount() {
-  }
-
   render() {
     console.log('PageProps', this.props);
     const { translations } = this.props.locale;
