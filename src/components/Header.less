@@ -1,0 +1,110 @@
+@import '../styles/variables.less';
+
+.developer {
+  position: relative;
+  padding: 2.875em 1.875em 1.875em;
+  .clearfix;
+
+  &__position {
+    color: white;
+    font-size: 2.125em;
+    line-height: 1.3;
+    margin: 0;
+    float: left;
+    font-family: 'Lato-Regular', sans-serif;
+  }
+  &__name {
+    color: white;
+    display: block;
+    font-family: 'Lato-Bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    padding: 0 0 0.6em 0.1em;
+  }
+  &__lang-switcher {
+    position: absolute;
+    top: 2.5em;
+    right: 3.8em;
+    font-size: 9px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // nav {
+  //   float: right;
+  //
+  //   a {
+  //     display: block;
+  //     float: left;
+  //     position: relative;
+  //     width: 2.5em;
+  //     height: 2.5em;
+  //     background: #fff;
+  //     border-radius: 50%;
+  //     color: transparent;
+  //     margin: 0 0.1em;
+  //     border: 4px solid #47a3da;
+  //     text-indent: -8000px;
+  //
+  //     &:after {
+  //       content: attr(data-info);
+  //       color: #47a3da;
+  //       position: absolute;
+  //       width: 600%;
+  //       top: 120%;
+  //       text-align: right;
+  //       right: 0;
+  //       opacity: 0;
+  //       pointer-events: none;
+  //     }
+  //     &:hover
+  //     &:hover {
+  //       background: #47a3da;
+  //
+  //       &:before {
+  //         color: #fff;
+  //       }
+  //       &:after {
+  //         opacity: 1;
+  //       }
+  //     }
+  //   }
+  // }
+
+  &__menu {
+    float: right;
+    position: relative;
+    font-size: 14px;
+    bottom: -15px;
+
+    & > li {
+      float: left;
+      margin-left: 10px;
+    }
+
+    &-switch,
+    &-contacts {
+      &:before {
+        font-size: 9px;
+        text-transform: uppercase;
+        line-height: 24px;
+        margin-right: 6px;
+      }
+    }
+
+    &-switch {
+      &:before {
+        content: 'switch to:'
+      }
+    }
+    &-contacts {
+      &:before {
+        content: 'contacts:'
+      }
+    }
+  }
+}

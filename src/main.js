@@ -4,8 +4,9 @@ import { Provider } from 'react-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import configureStore from './store/configureStore';
-
 import RootRoutes from './routes';
+
+import './styles/main.less';
 
 if (module.hot) {
   module.hot.accept();

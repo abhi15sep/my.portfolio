@@ -3,19 +3,45 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Spinner } from 'react-redux-spinner';
 
-import InitialActions from '../actions/InitialActions';
+import CommonActions from '../actions/CommonActions';
+import Header from '../components/Header';
 
 class App extends React.Component {
-  componentWillMount() {
-    const lang = this.props.location.pathname.replace('/', '');
 
-    this.props.actions.setLocale(lang);
+  componentWillMount(nextProps) {
+    this.getTranslations.bind(this)(this.props.locale.language);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.locale.language !== this.props.locale.language) {
+      this.getTranslations.bind(this)(nextProps.locale.language);
+    }
+  }
+
+  getTranslations(lang) {
+    this.props.actions.getTranslations(lang);
+  }
+
+  getToSwitchLanguage() {
+    return (this.props.locale.language === 'ru') ? 'english' : 'russian';
+  }
+
+  handlerSwitchLanguage() {
+    const { locale, actions } = this.props;
+    const switchLanguage = (locale.language === 'ru') ? 'en' : 'ru';
+
+    actions.setLocale(switchLanguage);
   }
 
   render() {
+    console.log('AppProps', this.props);
+
     return (
-      <div className="App">
+      <div className="container">
         <Spinner />
+        <Header
+          switchToLanguage={this.getToSwitchLanguage.bind(this)()}
+          handlerSwitchLanguage={this.handlerSwitchLanguage.bind(this)}
+        />
         <div className="content">
           {this.props.children}
         </div>
@@ -25,14 +51,16 @@ class App extends React.Component {
 }
 
 function mapStateToProps(state) {
-  const { locale } = state;
+  const { locale, translations } = state;
 
-  return state;
+  return {
+    locale
+  };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(InitialActions, dispatch)
+    actions: bindActionCreators(CommonActions, dispatch)
   };
 }
 
