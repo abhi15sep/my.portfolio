@@ -4,9 +4,9 @@ import config from '../config';
 const { api: apiConfig } = config;
 
 export default {
-  getLocaleData(lang) {
+  getTranslations(lang) {
     return new Promise((resolve, reject) => {
-      axios.get(`${apiConfig.path.localeData}/${lang}.json`)
+      axios.get(`${apiConfig.path.translations}/${lang}.json`)
       .then(response => resolve(response.data))
       .catch(error => reject(error));
     });

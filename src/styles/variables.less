@@ -1,0 +1,22 @@
+@font-color-default: #414141;
+@font-color-default-hover: #242323;
+@border-color-default: rgba(65, 65, 65, 0.4);
+@border-color-triangle: rgba(65, 65, 65, 0.8);
+@border-color-timeline: #e1e1e1;
+@border-color-tmicon: #d2d2d2;
+
+.transition(@time) {
+  -webkit-transition: @time all;
+  -moz-transition: @time all;
+  -ms-transition: @time all;
+  -o-transition: @time all;
+  transition: @time all;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

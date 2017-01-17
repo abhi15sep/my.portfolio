@@ -1,12 +1,6 @@
 @import (inline) "partials/reset.css";
 @import (inline) "partials/fonts.css";
-
-
-@font-color-default: #414141;
-@border-color-default: rgba(65, 65, 65, 0.4);
-@border-color-triangle: rgba(65, 65, 65, 0.8);
-@border-color-timeline: #e1e1e1;
-@border-color-tmicon: #d2d2d2;
+@import './variables.less';
 
 /* default */
 *, *:after, *:before {
@@ -61,21 +55,10 @@ p, dl {
   }
 }
 
-.main,
-.container > header {
+.container {
   width: 95%;
   max-width: 69em;
   margin: 0 auto;
-  padding: 0 1.875em 3.125em;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
 }
 
 .icon-drop:before {
@@ -88,146 +71,6 @@ p, dl {
 
 .hidden {
   display: none;
-}
-
-.transition(@time) {
-  -webkit-transition: @time all;
-  -moz-transition: @time all;
-  -ms-transition: @time all;
-  -o-transition: @time all;
-  transition: @time all;
-}
-
-/*** header ***/
-
-.container > header {
-  padding: 2.875em 1.875em 1.875em;
-
-  h1 {
-    font-size: 2.125em;
-    line-height: 1.3;
-    margin: 0;
-    float: left;
-    font-family: 'Lato-Regular', sans-serif;
-  }
-  .name {
-    display: block;
-    font-family: 'Lato-Bold', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    padding: 0 0 0.6em 0.1em;
-  }
-
-  nav {
-    float: right;
-
-    a {
-      display: block;
-      float: left;
-      position: relative;
-      width: 2.5em;
-      height: 2.5em;
-      background: #fff;
-      border-radius: 50%;
-      color: transparent;
-      margin: 0 0.1em;
-      border: 4px solid #47a3da;
-      text-indent: -8000px;
-
-      &:after {
-        content: attr(data-info);
-        color: #47a3da;
-        position: absolute;
-        width: 600%;
-        top: 120%;
-        text-align: right;
-        right: 0;
-        opacity: 0;
-        pointer-events: none;
-      }
-      &:hover:after {
-        opacity: 1;
-      }
-      &:hover {
-        background: #47a3da;
-      }
-    }
-  }
-}
-
-/*** menu ***/
-menu {
-  float: right;
-  position: relative;
-  font-size: 14px;
-  bottom: -15px;
-
-  & > li {
-    float: left;
-    margin-left: 10px;
-
-    & > span {
-      float: left;
-      font-size: 9px;
-      text-transform: uppercase;
-      line-height: 24px;
-    }
-  }
-
-  #lang {
-    float: right;
-    color: #fff;
-    width: 19px;
-    height: 18px;
-    font-size: 14px;
-    font-family: Lato-Bold,sans-serif;
-    text-align: center;
-    line-height: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    padding-right: 1px;
-    margin: 2px 0 0 3px;
-    background: @font-color-default;
-    .transition(.3s);
-
-    &:hover {
-      background: #666;
-    }
-  }
-
-  .contacts {
-    float: right;
-
-    li {
-      float: left;
-      margin-left: 6px;
-
-      a {
-        display: block;
-        color: @font-color-default;
-        font-size: 21px;
-        font-family: 'fontello';
-
-        &:hover:before {
-          color: #666;
-          .transition(.3s);
-        }
-
-        &.twitter:before {
-          content: '\e801';
-        }
-        &.github:before {
-          content: '\e800';
-        }
-        &.linkedin:before {
-          content: '\e802';
-        }
-        &.mail:before {
-          content: '\e803';
-        }
-      }
-    }
-  }
 }
 
 .icon-drop:before,
@@ -247,8 +90,52 @@ menu {
   padding-left: 8px;
 }
 
-.container > header nav a:hover:before {
-  color: #fff;
+/*****  content  *****/
+.content {
+  padding: 0 1.875em 3.125em;
+}
+ 
+/*****  socials  *****/
+.socials {
+  float: right;
+
+  li {
+    float: left;
+    margin-right: 6px;
+
+    a {
+      display: block;
+      color: @font-color-default;
+      width: 21px;
+      height: 21px;
+      font-size: 0;
+      overflow: hidden;
+      font-family: 'fontello';
+
+      &:before {
+        font-size: 21px;
+      }
+
+      &:hover:before {
+        display: block;
+        color: @font-color-default-hover;
+        .transition(.3s);
+      }
+    }
+  }
+
+  &__twitter:before {
+    content: '\e801';
+  }
+  &__github:before {
+    content: '\e800';
+  }
+  &__linkedin:before {
+    content: '\e802';
+  }
+  &__mail:before {
+    content: '\e803';
+  }
 }
 
 /*****  realization  *****/
