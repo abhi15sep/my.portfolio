@@ -1,4 +1,5 @@
 import React from 'react';
+import { browserHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Spinner } from 'react-redux-spinner';
@@ -12,6 +13,10 @@ class App extends React.Component {
     this.getTranslations.bind(this)(this.props.locale.language);
   }
   componentWillReceiveProps(nextProps) {
+    if (!Object.values(nextProps.locale.translations).length) {
+      return browserHistory.push('/unavailable');
+    }
+
     if (nextProps.locale.language !== this.props.locale.language) {
       this.getTranslations.bind(this)(nextProps.locale.language);
     }
