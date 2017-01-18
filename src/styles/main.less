@@ -55,8 +55,13 @@ p, dl {
   }
 }
 
+.container {
+  padding: 0 1.875em 1.875em;
+}
+
 .container,
-.content {
+.content,
+.developer {
   width: 95%;
   max-width: 69em;
   margin: 0 auto;
@@ -93,7 +98,7 @@ p, dl {
 
 /*****  content  *****/
 .content {
-  padding: 0 1.875em 3.125em;
+  padding: 4em 0 0 0;
 }
 
 /*****  socials  *****/
@@ -102,7 +107,11 @@ p, dl {
 
   li {
     float: left;
-    margin-right: 6px;
+    margin-left: 6px;
+
+    &:first-child {
+      margin-left: 0;
+    }
 
     a {
       display: block;
@@ -167,7 +176,6 @@ p, dl {
 
 
 .cbp_tmtimeline {
-  margin: 30px 0 0 0;
   padding: 0;
   list-style: none;
   position: relative;
@@ -181,7 +189,7 @@ p, dl {
   bottom: 0;
   width: 10px;
   background: @border-color-timeline;
-  left: 22%;
+  left: 13%;
   margin-left: -22px;
 }
 
@@ -196,7 +204,7 @@ p, dl {
 
 .cbp_tmtimeline > li .cbp_tmtime span {
   display: block;
-  text-align: right;
+  text-align: left;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
@@ -210,7 +218,7 @@ p, dl {
   position: relative;
 }
 .cbp_tmtimeline > li .cbp_tmlabel {
-  margin: 0 0 15px 25%;
+  margin: 0 0 15px 16%;
   color: @font-color-default;
   padding: 2em;
   font-size: 1.2em;
@@ -279,7 +287,7 @@ p, dl {
   width: 16px;
   position: absolute;
   pointer-events: none;
-  left: 22%;
+  left: 13%;
   top: 52px;
   margin: 0 0 0 -25px;
   background: @border-color-tmicon;
@@ -343,6 +351,21 @@ p, dl {
       }
     }
   }
+}
+
+
+/** nprogress ***/
+#nprogress .bar {
+  background-color: @font-color-default;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: @font-color-default;
+  border-left-color: @font-color-default;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px @font-color-default, 0 0 5px @font-color-default;
 }
 
 /* Media Queries */

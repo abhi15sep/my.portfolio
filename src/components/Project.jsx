@@ -25,6 +25,7 @@ class Projects extends React.Component {
                   <time className="cbp_tmtime">
                     <span>{ this.formatInvolvementDate(project.involvement_duration.start) }</span>
                   </time>
+                  <div className="cbp_tmicon cbp_tmicon-phone" />
                   <div className="cbp_tmlabel">
                     <h2>{ project.title }</h2>
                     <p>{ project.responsibilities }</p>
