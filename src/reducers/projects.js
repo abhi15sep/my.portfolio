@@ -1,7 +1,7 @@
 import AppConstants from '../constants/AppConstants';
 
 const initialState = {
-  projects: []
+  items: []
 };
 
 export default function userstate(state = initialState, action) {
@@ -10,7 +10,7 @@ export default function userstate(state = initialState, action) {
       return { ...state, ...action.payload };
 
     case AppConstants.GET_PROJECTS_FAIL:
-      return { ...state, projects: [], error: action.error };
+      return { ...state, items: [], error: action.error };
 
     default:
       return state;

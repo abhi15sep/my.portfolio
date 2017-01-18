@@ -28,6 +28,7 @@ const Header = props => (
 );
 
 Header.propTypes = {
+  // ToDo: Fix it
   // switchToLanguage: React.propTypes.string.isRequired,
   // handlerSwitchLanguage: React.propTypes.func.isRequired
 };

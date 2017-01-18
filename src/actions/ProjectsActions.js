@@ -6,11 +6,11 @@ export default {
   getProjects(lang) {
     return (dispatch) => {
       api.getProjects(lang)
-      .then((projects) => {
+      .then((items) => {
         dispatch({
           type: AppConstants.GET_PROJECTS_SUCCESS,
           payload: {
-            projects
+            items
           }
         });
       })

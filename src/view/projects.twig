@@ -64,19 +64,6 @@
                         <li><a href="{{ project.link }}" class="btn link" target="_blank">{{ locale.link }}</a></li>
                     {% endif %}
                 </ul>
-                <dl class="details hidden">
-                    <dt class="">{{ locale.description }}:</dt>
-                    <dd class="text">{{ project.description }}</dd>
-                    <dt class="">{{ locale.customer }}:</dt>
-                    <dd class="text">{{ project.customer | capitalize }}</dd>
-                    <dt class="">{{ locale.tools }}:</dt>
-                    <dd class="text">
-                        {% for tools in project.tools %}
-                            {{ tools }}
-                            {% if loop.index != loop.length %} / {% endif %}
-                        {% endfor %}
-                    </dd>
-                </dl>
             </div>
         </li>
     {% endfor %}

@@ -3,16 +3,36 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import ProjectsActions from '../actions/ProjectsActions';
+import Project from '../components/Project';
 
 
-class Page extends React.Component {
+class ProjectsContainer extends React.Component {
+
+  componentWillMount() {
+    this.getProjects.bind(this)(this.props.locale.language);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.locale.language !== this.props.locale.language) {
+      this.getProjects.bind(this)(nextProps.locale.language);
+    }
+  }
+
+  getProjects(lang) {
+    this.props.actions.getProjects(lang);
+  }
+
   render() {
     console.log('PageProps', this.props);
     const { translations } = this.props.locale;
+    const { projects } = this.props;
 
     return (
       <div>
-        <div className="projects">{translations.description}</div>
+        <Project
+          translations={translations}
+          projects={projects}
+        />
       </div>
     );
   }
@@ -23,7 +43,7 @@ function mapStateToProps(state) {
 
   return {
     locale,
-    projects
+    projects: projects.items
   };
 }
 
@@ -33,4 +53,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Page);
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectsContainer);
