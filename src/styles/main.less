@@ -354,19 +354,33 @@ p, dl {
 }
 
 
-/** nprogress ***/
+/*** nprogress ***/
 #nprogress .bar {
-  background-color: @font-color-default;
+  background-color: @color-loader;
 }
 
 #nprogress .spinner-icon {
-  border-top-color: @font-color-default;
-  border-left-color: @font-color-default;
+  border-top-color: @color-loader;
+  border-left-color: @color-loader;
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px @font-color-default, 0 0 5px @font-color-default;
+  box-shadow: 0 0 10px @color-loader, 0 0 5px @color-loader;
 }
+
+/*** navigation ***/
+.navigation {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  &__item {
+    float: left;
+    list-style-type: none;
+    margin-right: 10px;
+  }
+}
+
 
 /* Media Queries */
 @media screen and (max-width: 65.375em) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import config from '../config';
 
 import './Header.less';
@@ -15,6 +16,11 @@ const Header = props => (
     >
       {`to ${props.switchToLanguage} version`}
     </button>
+    <nav className="navigation">
+      <li className="navigation__item"><Link to="projects">projects</Link></li>
+      <li className="navigation__item"><Link to="own-projects">own-projects</Link></li>
+      <li className="navigation__item"><Link to="my-stack">my-stack</Link></li>
+    </nav>
     <menu className="developer__menu">
       <li className="developer__menu-contacts">
         <ul className="socials">

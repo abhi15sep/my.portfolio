@@ -13,7 +13,7 @@ function getEntrySources(sources) {
   if (!isProd) {
     sources.unshift('react-hot-loader/patch');
     sources.unshift(`webpack-dev-server/client?http://${NODE_HOST}:${NODE_PORT}`);
-    sources.unshift('webpack/hot/only-dev-server');
+    sources.unshift('webpack/hot/dev-server');
   }
 
   return sources;
