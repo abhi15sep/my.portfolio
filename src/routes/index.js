@@ -14,6 +14,7 @@ function getHistorySyncWithStore(store) {
 const RootRoutes = ({ store }) => (
   <Router history={getHistorySyncWithStore(store)}>
     <Route path="/" component={App}>
+      <IndexRedirect to="projects" />
       <Route path="/projects" component={CommercialProjects} />
     </Route>
     <Route path="/404" component={Page404} />
