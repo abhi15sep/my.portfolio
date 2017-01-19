@@ -9,32 +9,33 @@ import Header from '../components/Header';
 
 class App extends React.Component {
 
-  componentWillMount(nextProps) {
-    this.getTranslations.bind(this)(this.props.locale.language);
+  componentWillMount() {
+    this.getAllData.bind(this)(this.props.language);
   }
   componentWillReceiveProps(nextProps) {
-    if (!Object.values(nextProps.locale.translations).length) {
+    if (nextProps.errors.length) {
       return browserHistory.push('/unavailable');
     }
 
-    if (nextProps.locale.language !== this.props.locale.language) {
-      this.getTranslations.bind(this)(nextProps.locale.language);
+    if (nextProps.language !== this.props.language) {
+      this.getAllData.bind(this)(nextProps.language);
     }
   }
 
-  getTranslations(lang) {
+  getAllData(lang) {
     this.props.actions.getTranslations(lang);
+    this.props.actions.getProjects(lang);
   }
 
   getToSwitchLanguage() {
-    return (this.props.locale.language === 'ru') ? 'english' : 'russian';
+    return (this.props.language === 'ru') ? 'english' : 'russian';
   }
 
   handlerSwitchLanguage() {
-    const { locale, actions } = this.props;
-    const switchLanguage = (locale.language === 'ru') ? 'en' : 'ru';
+    const { language, actions } = this.props;
+    const nextLanguage = (language === 'ru') ? 'en' : 'ru';
 
-    actions.setLocale(switchLanguage);
+    actions.setLocale(nextLanguage);
   }
 
   render() {
@@ -56,10 +57,14 @@ class App extends React.Component {
 }
 
 function mapStateToProps(state) {
-  const { locale, translations } = state;
+  const { locale, projects, errors } = state;
+  console.log('state', state);
 
   return {
-    locale
+    language: locale.language,
+    translations: locale.translations,
+    projects: projects.items,
+    errors
   };
 }
 

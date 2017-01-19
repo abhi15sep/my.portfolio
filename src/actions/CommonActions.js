@@ -13,6 +13,7 @@ export default {
       });
     };
   },
+
   getTranslations(lang) {
     return (dispatch) => {
       dispatch({
@@ -33,9 +34,32 @@ export default {
       .catch((err) => {
         dispatch({
           type: AppConstants.GET_TRANSLATIONS_FAIL,
-          error: err,
           [pendingTask]: end
         });
+
+        dispatch({ type: AppConstants.ADD_ERROR, error: err });
+      });
+    };
+  },
+
+  getProjects(lang) {
+    return (dispatch) => {
+      api.getProjects(lang)
+      .then((items) => {
+        dispatch({
+          type: AppConstants.GET_PROJECTS_SUCCESS,
+          payload: {
+            items
+          }
+        });
+      })
+      .catch((err) => {
+        dispatch({
+          type: AppConstants.GET_PROJECTS_FAIL,
+          error: err
+        });
+
+        dispatch({ type: AppConstants.ADD_ERROR, error: err });
       });
     };
   }
