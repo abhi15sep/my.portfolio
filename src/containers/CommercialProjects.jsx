@@ -1,35 +1,32 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import ProjectsActions from '../actions/ProjectsActions';
-import Projects from '../components/Projects';
+import Projects from '../components/Projects/Projects';
 
 
 class CommercialProjects extends React.Component {
-
-  componentWillMount() {
-    this.getProjects.bind(this)(this.props.locale.language);
+  static defaultProps = {
+    hiddenProjectsIDs: [13]
   }
 
-  componentWillReceiveProps(nextProps) {
-    // if (nextProps.locale.language !== this.props.locale.language) {
-    //   this.getProjects.bind(this)(nextProps.locale.language);
-    // }
+  getCommercialProjects(projects) {
+    const commercialProjects = projects.filter(project => project.customer !== 'own');
+
+    return this.deleteHiddenProjects.bind(this)(commercialProjects);
   }
 
-  getProjects(lang) {
-    // this.props.actions.getProjects(lang);
+  deleteHiddenProjects(commercialProjects) {
+    return commercialProjects.filter(project =>
+      (!(this.props.hiddenProjectsIDs.indexOf(project.id) + 1)));
   }
 
   render() {
-    const { translations } = this.props.locale;
-    const { projects } = this.props;
+    const { translations, projects } = this.props;
 
     return (
       <Projects
         translations={translations}
-        projects={projects}
+        projects={this.getCommercialProjects.bind(this)(projects)}
       />
     );
   }
@@ -39,15 +36,9 @@ function mapStateToProps(state) {
   const { projects, locale } = state;
 
   return {
-    locale,
+    translations: locale.translations,
     projects: projects.items
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(ProjectsActions, dispatch)
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CommercialProjects);
+export default connect(mapStateToProps)(CommercialProjects);
