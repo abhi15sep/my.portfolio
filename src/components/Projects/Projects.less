@@ -1,0 +1,139 @@
+@import '../../styles/variables.less';
+
+.projects {
+  padding: 0;
+  list-style: none;
+  position: relative;
+
+  /* The line */
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: @border-color-timeline;
+    left: 13%;
+    margin-left: -22px;
+  }
+
+  .project {
+    position: relative;
+
+    &:before {
+      content: " ";
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      pointer-events: none;
+      left: 13%;
+      top: 52px;
+      margin: 0 0 0 -25px;
+      background: @border-color-tmicon;
+    }
+
+    &__time {
+      display: block;
+      width: 25%;
+      padding-right: 100px;
+      position: absolute;
+      top: 42px;
+      text-align: left;
+      font-size: 2.0em;
+      color: @font-color-default;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__details {
+      display: none;
+
+      &--show {
+        display: block;
+      }
+    }
+
+    &__label {
+      margin: 0 0 15px 16%;
+      color: @font-color-default;
+      padding: 2em;
+      font-size: 1.2em;
+      font-family: 'Lato-Light', sans-serif;
+      line-height: 1.4;
+      position: relative;
+      border-radius: 5px;
+      border: 1px solid @border-color-default;
+
+      &:after {
+        display: block;
+        right: 100%;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border: 10px solid transparent;
+        border-right-color: @border-color-tmicon;
+        top: 48px;
+      }
+
+      h2 {
+        font-size: 1.4em;
+        margin: 0;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid @border-color-default;
+      }
+
+      dl {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 10px;
+
+        dt {
+          position: relative;
+          top: 3px;
+          font-family: Lato-Light, sans-serif;
+          font-size: .8em;
+          text-transform: lowercase;
+          padding-right: 10px;
+        }
+        dd {
+          font-family: Lato-Regular, sans-serif;
+          font-size: .68em;
+          text-transform: uppercase;
+          margin-left: 40px;
+        }
+      }
+
+      &-text {
+        text-transform: none !important;
+        font-size: .8em !important;
+      }
+    }
+
+    &__actions-buttons {
+      margin-top: 20px;
+      .clearfix;
+
+      li {
+        float: left;
+        list-style-type: none;
+        margin: 5px 5px 0 0;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      a {
+        display: inline-block;
+        outline: none;
+
+      }
+      a:hover {
+        color: #494949;
+      }
+    }
+  }
+}

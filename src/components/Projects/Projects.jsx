@@ -1,6 +1,7 @@
 import React from 'react';
 
 import getUniqueID from '../../utils/getUniqueID';
+import './Projects.less';
 
 class Projects extends React.Component {
   formatInvolvementDate(date) {
@@ -12,27 +13,71 @@ class Projects extends React.Component {
     return `${month}/${year}`;
   }
 
+  handlerMoreDetails(projectID) {
+    const $project = document.querySelector(`.project-${projectID}`);
+    const $moreDetails = $project.querySelector('.project__details');
+
+    $moreDetails.classList.toggle('project__details--show');
+  }
+
+  renderActionsButtons(project, translations) {
+    return (
+      <ul className="project__actions-buttons">
+        <li>
+          <button
+            className="btn"
+            onClick={this.handlerMoreDetails.bind(this, project.id)}
+          >
+            { translations.more }
+          </button>
+        </li>
+        {
+          project.link
+          ? <li><a href={project.link} className="btn link" rel="noopener noreferrer" target="_blank">{ translations.link }</a></li>
+          : null
+        }
+      </ul>
+    );
+  }
+
+  renderProjectDetails(project, translations) {
+    return (
+      <dl className="project__details">
+        <dt className="">{ translations.description }:</dt>
+        <dd className="project__label-text">{ project.description }</dd>
+        <dt className="">{ translations.customer }:</dt>
+        <dd className="project__label-text">{ project.customer }</dd>
+        <dt className="">{ translations.tools }:</dt>
+        <dd className="project__label-text">
+          {
+            project.tools.map((tool, index) => {
+              tool = (index + 1 !== project.tools.length) ? `${tool} / ` : tool;
+
+              return <span key={getUniqueID()}>{tool}</span>;
+            })
+          }
+        </dd>
+      </dl>
+    );
+  }
+
   render() {
     const { projects, translations } = this.props;
-    console.log(this.props.projects);
 
     return (
-      <ul className="cbp_tmtimeline">
+      <ul className="projects">
         {
           projects.map(project =>
-            <li key={project.id}>
-              <time className="cbp_tmtime">
-                <span>{ this.formatInvolvementDate(project.involvement_duration.start) }</span>
-              </time>
-              <div className="cbp_tmicon cbp_tmicon-phone" />
-              <div className="cbp_tmlabel">
+            <li className={`project project-${project.id}`} key={project.id}>
+              <time className="project__time">{ this.formatInvolvementDate(project.involvement_duration.start) }</time>
+              <div className="project__label">
                 <h2>{ project.title }</h2>
                 <p>{ project.responsibilities }</p>
                 <dl>
                   <dt>{ translations.role }:</dt>
-                  <dd className="role">
+                  <dd className="project__roles">
                     {
-                      project.role.map(role =>
+                      project.roles.map(role =>
                         <span key={getUniqueID()}>{role}</span>
                       )
                     }
@@ -41,14 +86,14 @@ class Projects extends React.Component {
                   <dd>
                     <div className="faw">
                       {
-                        project.realization.map((realization, index) =>
+                        project.realizations.map((realization, index) =>
                           <i key={getUniqueID()} title={realization} className={`fa fa-${realization}`} />
                         )
                       }
                     </div>
                   </dd>
                   <dt>{ translations.technologies }:</dt>
-                  <dd className="web-tech">
+                  <dd className="project__technologies">
                     {
                       project.technologies.map((technology, index) => {
                         technology = (index !== project.technologies.length - 1)
@@ -59,33 +104,12 @@ class Projects extends React.Component {
                     }
                   </dd>
                   <dt>{ translations.team_size }:</dt>
-                  <dd className="text">{ project.team_size }</dd>
+                  <dd className="project__label-text">{ project.team_size }</dd>
                 </dl>
-                <ul className="buttons clearfix">
-                  <li><button className="btn detail">{ translations.more }</button></li>
-                  {
-                    project.link
-                    ? <li><a href={project.link} className="btn link" rel="noopener noreferrer" target="_blank">{ translations.link }</a></li>
-                    : null
-                  }
-                </ul>
 
-                <dl className="details hidden">
-                  <dt className="">{ translations.description }:</dt>
-                  <dd className="text">{ project.description }</dd>
-                  <dt className="">{ translations.customer }:</dt>
-                  <dd className="text">{ project.customer }</dd>
-                  <dt className="">{ translations.tools }:</dt>
-                  <dd className="text">
-                    {
-                      project.tools.map((tool, index) => {
-                        tool = (index !== project.tools.length) ? `${tool} /` : tool;
+                { this.renderActionsButtons.bind(this)(project, translations) }
 
-                        return <span key={getUniqueID()}>{tool}</span>;
-                      })
-                    }
-                  </dd>
-                </dl>
+                { this.renderProjectDetails.bind(this)(project, translations) }
               </div>
             </li>
         ).reverse()
