@@ -3,7 +3,8 @@ export default {
   api: {
     path: {
       translations: '/data/translations',
-      projects: '/data/projects'
+      projects: '/data/projects',
+      projectsImgs: '/img/projects'
     }
   },
   links: {

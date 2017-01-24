@@ -1,0 +1,36 @@
+.mask {
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .3s opacity;
+
+  &__close {
+    position: fixed;
+    top: 24px;
+    right: 2.8%;
+    width: 30px;
+    height: 30px;
+    opacity: .7;
+    cursor: pointer;
+    background: url('../img/close-icon.png') no-repeat;
+    transition: .3s opacity;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--show {
+    z-index: 500;
+    opacity: 100;
+    background: rgba(0, 0, 0, 0.75);
+
+    .mask__close {
+      z-index: 1000;
+    }
+  }
+}

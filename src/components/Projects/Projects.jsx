@@ -32,6 +32,12 @@ class Projects extends React.Component {
           </button>
         </li>
         {
+          project.imgs.length
+          ? <li><button className="btn" onClick={this.props.handlerCLickShowGallery.bind(this, project.id)}>
+            { translations.see }</button></li>
+          : null
+        }
+        {
           project.link
           ? <li><a href={project.link} className="btn link" rel="noopener noreferrer" target="_blank">{ translations.link }</a></li>
           : null
