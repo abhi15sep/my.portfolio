@@ -80,7 +80,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         use: [
           'file-loader?name=[sha512:hash:base64:7].[ext]',
-          'image-webpack?progressive=true&optimizationLevel=7&interlaced=true'
+          'image-webpack-loader?progressive=true&optimizationLevel=7&interlaced=true'
         ],
         exclude: [/node_modules/, /public/, /src\/fonts/]
       },
