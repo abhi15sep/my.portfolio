@@ -9,14 +9,10 @@ import Skills from '../containers/Skills';
 import Page404 from '../components/Page404';
 import Unavailable from '../components/Unavailable';
 
-function getHistorySyncWithStore(store) {
-  return syncHistoryWithStore(browserHistory, store);
-}
-
 const routesPathes = config.routes.path;
 
 const RootRoutes = ({ store }) => (
-  <Router history={getHistorySyncWithStore(store)}>
+  <Router history={syncHistoryWithStore(browserHistory, store)}>
     <Route path="/" component={App}>
       <IndexRedirect to="projects" />
       <Route path={routesPathes.commercialProjects} component={Projects} />
