@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Spinner } from 'react-redux-spinner';
 
+import getTranslationsFromState from '../utils/getTranslationsFromState';
 import CommonActions from '../actions/CommonActions';
 import Header from '../components/Header';
 
@@ -49,7 +50,8 @@ class App extends React.Component {
           handlerSwitchLanguage={this.handlerSwitchLanguage.bind(this)}
         />
         <div className="content">
-          {this.props.children}
+          { React.cloneElement(this.props.children,
+            { getTranslation: this.props.getTranslationsFromState }) }
         </div>
       </div>
     );
@@ -58,7 +60,6 @@ class App extends React.Component {
 
 function mapStateToProps(state) {
   const { locale, projects, errors } = state;
-  console.log('state', state);
 
   return {
     language: locale.language,
@@ -70,7 +71,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(CommonActions, dispatch)
+    actions: bindActionCreators(CommonActions, dispatch),
+    getTranslationsFromState: params => dispatch(getTranslationsFromState(params))
   };
 }
 

@@ -44,12 +44,13 @@ class CommercialProjects extends React.Component {
   }
 
   render() {
-    const { translations, projects, isGalleryShow, currentProjectID } = this.props;
+    console.log('CommProjectsProps', this.props);
+    const { getTranslation, projects, isGalleryShow, currentProjectID } = this.props;
 
     return (
       <div>
         <Projects
-          translations={translations}
+          getTranslation={getTranslation}
           projects={this.getCommercialProjects.bind(this)(projects)}
           handlerCLickShowGallery={this.handlerCLickShowGallery.bind(this)}
         />
@@ -72,7 +73,6 @@ function mapStateToProps(state) {
   const { projects, locale } = state;
 
   return {
-    translations: locale.translations,
     projects: projects.items,
     isGalleryShow: projects.isGalleryShow,
     currentProjectID: projects.currentProjectID

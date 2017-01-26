@@ -20,7 +20,7 @@ class Projects extends React.Component {
     $moreDetails.classList.toggle('project__details--show');
   }
 
-  renderActionsButtons(project, translations) {
+  renderActionsButtons(project, getTranslation) {
     return (
       <ul className="project__actions-buttons">
         <li>
@@ -28,32 +28,32 @@ class Projects extends React.Component {
             className="btn"
             onClick={this.handlerMoreDetails.bind(this, project.id)}
           >
-            { translations.more }
+            { getTranslation('more') }
           </button>
         </li>
         {
           project.imgs.length
           ? <li><button className="btn" onClick={this.props.handlerCLickShowGallery.bind(this, project.id)}>
-            { translations.see }</button></li>
+            { getTranslation('see') }</button></li>
           : null
         }
         {
           project.link
-          ? <li><a href={project.link} className="btn link" rel="noopener noreferrer" target="_blank">{ translations.link }</a></li>
+          ? <li><a href={project.link} className="btn link" rel="noopener noreferrer" target="_blank">{ getTranslation('link') }</a></li>
           : null
         }
       </ul>
     );
   }
 
-  renderProjectDetails(project, translations) {
+  renderProjectDetails(project, getTranslation) {
     return (
       <dl className="project__details">
-        <dt className="">{ translations.description }:</dt>
+        <dt className="">{ getTranslation('description') }:</dt>
         <dd className="project__label-text">{ project.description }</dd>
-        <dt className="">{ translations.customer }:</dt>
+        <dt className="">{ getTranslation('customer') }:</dt>
         <dd className="project__label-text">{ project.customer }</dd>
-        <dt className="">{ translations.tools }:</dt>
+        <dt className="">{ getTranslation('tools') }:</dt>
         <dd className="project__label-text">
           {
             project.tools.map((tool, index) => {
@@ -68,7 +68,8 @@ class Projects extends React.Component {
   }
 
   render() {
-    const { projects, translations } = this.props;
+    console.log('Projects', this.props);
+    const { projects, getTranslation } = this.props;
 
     return (
       <ul className="projects">
@@ -80,7 +81,7 @@ class Projects extends React.Component {
                 <h2>{ project.title }</h2>
                 <p>{ project.responsibilities }</p>
                 <dl>
-                  <dt>{ translations.role }:</dt>
+                  <dt>{ getTranslation('role') }:</dt>
                   <dd className="project__roles">
                     {
                       project.roles.map(role =>
@@ -88,7 +89,7 @@ class Projects extends React.Component {
                       )
                     }
                   </dd>
-                  <dt>{ translations.realization }:</dt>
+                  <dt>{ getTranslation('realization') }:</dt>
                   <dd>
                     <div className="faw">
                       {
@@ -98,7 +99,7 @@ class Projects extends React.Component {
                       }
                     </div>
                   </dd>
-                  <dt>{ translations.technologies }:</dt>
+                  <dt>{ getTranslation('technologies') }:</dt>
                   <dd className="project__technologies">
                     {
                       project.technologies.map((technology, index) => {
@@ -109,13 +110,13 @@ class Projects extends React.Component {
                       })
                     }
                   </dd>
-                  <dt>{ translations.team_size }:</dt>
+                  <dt>{ getTranslation('team_size') }:</dt>
                   <dd className="project__label-text">{ project.team_size }</dd>
                 </dl>
 
-                { this.renderActionsButtons.bind(this)(project, translations) }
+                { this.renderActionsButtons.bind(this)(project, getTranslation) }
 
-                { this.renderProjectDetails.bind(this)(project, translations) }
+                { this.renderProjectDetails.bind(this)(project, getTranslation) }
               </div>
             </li>
         ).reverse()
@@ -126,7 +127,7 @@ class Projects extends React.Component {
 }
 
 // Projects.propTypes = {
-//   translations: React.propTypes.object.isRequired,
+//   getTranslation: React.propTypes.func.isRequired,
 //   projects: React.propTypes.array.isRequired
 // };
 
