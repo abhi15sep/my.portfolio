@@ -2,21 +2,46 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import config from '../config';
 import ProjectsActions from '../actions/ProjectsActions';
 import Projects from '../components/Projects/Projects';
 import Gallery from '../components/Projects/Gallery';
 import Mask from '../components/Mask';
 
 
-class CommercialProjects extends React.Component {
+class ProjectsContainer extends React.Component {
   static defaultProps = {
-    hiddenProjectsIDs: [13]
+    hiddenProjectsIDs: [13],
+    commercialProjectsPath: config.routes.path.commercialProjects,
+    ownProjectsPath: config.routes.path.ownProjects
+  }
+
+  getProjects(projects) {
+    const currentPath = this.props.route.path;
+    console.log(currentPath);
+
+    switch (currentPath) {
+      case this.props.commercialProjectsPath:
+        return this.getCommercialProjects(projects);
+
+      case this.props.ownProjectsPath:
+        return this.getOwnProjects(projects);
+
+      default:
+        return projects;
+    }
   }
 
   getCommercialProjects(projects) {
-    const commercialProjects = projects.filter(project => project.customer !== 'own');
+    const commercialProjects = projects.filter(project => project.customer);
 
     return this.deleteHiddenProjects.bind(this)(commercialProjects);
+  }
+
+  getOwnProjects(projects) {
+    const ownProjects = projects.filter(project => !project.customer);
+
+    return this.deleteHiddenProjects.bind(this)(ownProjects);
   }
 
   deleteHiddenProjects(commercialProjects) {
@@ -44,14 +69,14 @@ class CommercialProjects extends React.Component {
   }
 
   render() {
-    console.log('CommProjectsProps', this.props);
+    console.log('ProjectsProps', this.props);
     const { getTranslation, projects, isGalleryShow, currentProjectID } = this.props;
 
     return (
       <div>
         <Projects
           getTranslation={getTranslation}
-          projects={this.getCommercialProjects.bind(this)(projects)}
+          projects={this.getProjects.bind(this)(projects)}
           handlerCLickShowGallery={this.handlerCLickShowGallery.bind(this)}
         />
         <Mask
@@ -85,4 +110,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommercialProjects);
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectsContainer);

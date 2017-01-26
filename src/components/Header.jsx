@@ -19,7 +19,7 @@ const Header = props => (
     <nav className="navigation">
       <li className="navigation__item"><Link to="projects">projects</Link></li>
       <li className="navigation__item"><Link to="own-projects">own-projects</Link></li>
-      <li className="navigation__item"><Link to="my-stack">skills</Link></li>
+      <li className="navigation__item"><Link to="skills">skills</Link></li>
     </nav>
     <menu className="developer__menu">
       <li className="developer__menu-contacts">

@@ -46,13 +46,25 @@ class Projects extends React.Component {
     );
   }
 
+  renderProjectCustomer(project, getTranslation) {
+    return (
+      <span>
+        <dt className="">{ getTranslation('customer') }:</dt>
+        <dd className="project__label-text">{ project.customer }</dd>
+      </span>
+    );
+  }
+
   renderProjectDetails(project, getTranslation) {
     return (
       <dl className="project__details">
         <dt className="">{ getTranslation('description') }:</dt>
         <dd className="project__label-text">{ project.description }</dd>
-        <dt className="">{ getTranslation('customer') }:</dt>
-        <dd className="project__label-text">{ project.customer }</dd>
+        {
+          project.customer
+          ? this.renderProjectCustomer.bind(this)(project, getTranslation)
+          : null
+        }
         <dt className="">{ getTranslation('tools') }:</dt>
         <dd className="project__label-text">
           {
@@ -68,7 +80,6 @@ class Projects extends React.Component {
   }
 
   render() {
-    console.log('Projects', this.props);
     const { projects, getTranslation } = this.props;
 
     return (

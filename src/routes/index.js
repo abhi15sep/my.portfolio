@@ -2,9 +2,9 @@ import React from 'react';
 import { Router, Route, Redirect, IndexRedirect, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
+import config from '../config';
 import App from '../containers/App';
-import CommercialProjects from '../containers/CommercialProjects';
-import OwnProjects from '../containers/OwnProjects';
+import Projects from '../containers/Projects';
 import Skills from '../containers/Skills';
 import Page404 from '../components/Page404';
 import Unavailable from '../components/Unavailable';
@@ -13,13 +13,15 @@ function getHistorySyncWithStore(store) {
   return syncHistoryWithStore(browserHistory, store);
 }
 
+const routesPathes = config.routes.path;
+
 const RootRoutes = ({ store }) => (
   <Router history={getHistorySyncWithStore(store)}>
     <Route path="/" component={App}>
       <IndexRedirect to="projects" />
-      <Route path="/projects" component={CommercialProjects} />
-      <Route path="/own-projects" component={OwnProjects} />
-      <Route path="/skills" component={Skills} />
+      <Route path={routesPathes.commercialProjects} component={Projects} />
+      <Route path={routesPathes.ownProjects} component={Projects} />
+      <Route path={routesPathes.skills} component={Skills} />
     </Route>
     <Route path="/404" component={Page404} />
     <Route path="/unavailable" component={Unavailable} />

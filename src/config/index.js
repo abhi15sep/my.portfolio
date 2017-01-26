@@ -7,6 +7,13 @@ export default {
       projectsImgs: '/img/projects'
     }
   },
+  routes: {
+    path: {
+      commercialProjects: '/projects',
+      ownProjects: '/own-projects',
+      skills: '/skills'
+    }
+  },
   links: {
     social: {
       linkedin: 'https://ua.linkedin.com/in/maplemap',
