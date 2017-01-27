@@ -20,5 +20,8 @@ export default {
       github: 'https://github.com/maplemap'
     },
     mail: 'hello@maplemap.net'
+  },
+  localStorage: {
+    key: 'maplemap-storage-redux'
   }
 };

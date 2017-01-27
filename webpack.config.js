@@ -35,7 +35,8 @@ module.exports = {
       'react-redux',
       'axios',
       'react-slick',
-      'react-redux-spinner'
+      'react-redux-spinner',
+      'redux-localstorage'
     ]
   },
   output: {
