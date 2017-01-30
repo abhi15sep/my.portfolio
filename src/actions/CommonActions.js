@@ -62,5 +62,18 @@ export default {
         dispatch({ type: AppConstants.ADD_ERROR, error: err });
       });
     };
+  },
+
+  setDataVersion() {
+    return (dispatch) => {
+      if (window.DATA_VERSION) {
+        dispatch({
+          type: AppConstants.ADD_DATA_VERSION,
+          payload: {
+            number: window.DATA_VERSION
+          }
+        });
+      }
+    };
   }
 };
