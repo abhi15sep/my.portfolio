@@ -18,7 +18,6 @@ class ProjectsContainer extends React.Component {
 
   getProjects(projects) {
     const currentPath = this.props.route.path;
-    console.log(currentPath);
 
     switch (currentPath) {
       case this.props.commercialProjectsPath:

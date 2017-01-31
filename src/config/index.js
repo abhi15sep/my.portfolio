@@ -22,6 +22,7 @@ export default {
     mail: 'hello@maplemap.net'
   },
   localStorage: {
-    key: 'maplemap-storage-redux'
+    key: 'maplemap-storage-redux',
+    daysExpirationOfData: 7
   }
 };

@@ -5,27 +5,32 @@ import { connect } from 'react-redux';
 import { Spinner } from 'react-redux-spinner';
 
 import getTranslationsFromState from '../utils/getTranslationsFromState';
+import isLocalStorageHasValidateData from '../utils/isLocalStorageHasValidateData';
 import CommonActions from '../actions/CommonActions';
 import Header from '../components/Header';
 
 class App extends React.Component {
 
   componentWillMount() {
-    this.getAllData.bind(this)(this.props.language);
+    if (!isLocalStorageHasValidateData()) {
+      this.getAllData.bind(this)(this.props.language);
+    }
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors.length) {
       return browserHistory.push('/unavailable');
     }
-
     if (nextProps.language !== this.props.language) {
       this.getAllData.bind(this)(nextProps.language);
     }
   }
 
   getAllData(lang) {
-    this.props.actions.getTranslations(lang);
-    this.props.actions.getProjects(lang);
+    const { actions } = this.props;
+
+    actions.getTranslations(lang);
+    actions.getProjects(lang);
+    actions.setDataVersion();
   }
 
   getToSwitchLanguage() {
@@ -73,6 +78,7 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(CommonActions, dispatch),
     getTranslationsFromState: params => dispatch(getTranslationsFromState(params))
+    // isLocalStorageHasData: () => dispatch(isLocalStorageHasData())
   };
 }
 
