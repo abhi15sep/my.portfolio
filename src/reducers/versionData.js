@@ -1,7 +1,7 @@
 import AppConstants from '../constants/AppConstants';
 
 const initialState = {
-  number: 0
+  timestamp: 0
 };
 
 export default function errors(state = initialState, action) {

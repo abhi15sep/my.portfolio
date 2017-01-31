@@ -5,14 +5,14 @@ import { connect } from 'react-redux';
 import { Spinner } from 'react-redux-spinner';
 
 import getTranslationsFromState from '../utils/getTranslationsFromState';
-import isActualDataInLocalStorage from '../utils/isLocalStorageHasData';
+import isLocalStorageHasValidateData from '../utils/isLocalStorageHasValidateData';
 import CommonActions from '../actions/CommonActions';
 import Header from '../components/Header';
 
 class App extends React.Component {
 
   componentWillMount() {
-    if (!isActualDataInLocalStorage()) {
+    if (!isLocalStorageHasValidateData()) {
       this.getAllData.bind(this)(this.props.language);
     }
   }

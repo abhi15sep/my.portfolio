@@ -66,11 +66,11 @@ export default {
 
   setDataVersion() {
     return (dispatch) => {
-      if (window.DATA_VERSION) {
+      if (window.DATA_VERSION_TIMESTAMP) {
         dispatch({
           type: AppConstants.ADD_DATA_VERSION,
           payload: {
-            number: window.DATA_VERSION
+            timestamp: window.DATA_VERSION_TIMESTAMP
           }
         });
       }

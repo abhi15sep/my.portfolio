@@ -14,10 +14,6 @@ if (module.hot) {
 }
 
 injectTapEventPlugin();
-if (window.DATA_VERSION_TIMESTAMP) {
-  AppConstants.DATA_VERSION_TIMESTAMP = window.DATA_VERSION_TIMESTAMP;
-}
-
 
 const store = configureStore();
 
