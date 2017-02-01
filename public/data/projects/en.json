@@ -204,7 +204,7 @@
     "technologies": ["html5", "css3", "less", "javascript", "react.js", "webpack", "git"],
     "realizations": ["desktop", "tablet", "mobile"],
     "tools": ["JetBrains WebStorm"],
-    "imgs": [],
+    "imgs": ["project_11-1.jpg", "project_11-2.jpg", "project_11-3.jpg", "project_11-4.jpg", "project_11-5.png", "project_11-6.png", "project_11-7.png"],
     "link": ""
   }
 ]
