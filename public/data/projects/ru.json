@@ -234,7 +234,7 @@
     "technologies": ["html5", "css3", "less", "BEM", "JS ES6", "webpack", "git"],
     "realizations": ["desktop", "tablet", "mobile"],
     "tools": ["Atom", "Sketch"],
-    "imgs": ["project_12-1.jpg", "project_12-2.jpg", "project_12-3.jpg", "project_12-4.jpg", "project_12-5.jpg", "project_12-6.jpg", "project_12-7.png", "project_12-7.png", "project_12-8.png", "project_12-9.png", "project_12-10.png", "project_12-11.png", "project_12-12.png", "project_12-13.png", "project_12-14.png", "project_12-15.png"],
+    "imgs": ["project_12-1.jpg", "project_12-2.jpg", "project_12-3.jpg", "project_12-4.jpg", "project_12-5.jpg", "project_12-6.jpg", "project_12-7.png", "project_12-8.png", "project_12-9.png", "project_12-10.png", "project_12-11.png", "project_12-12.png", "project_12-13.png", "project_12-14.png"],
     "source": "",
     "link": "http://dentalflash.net/"
   },
