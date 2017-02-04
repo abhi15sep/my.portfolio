@@ -51,6 +51,7 @@ class App extends React.Component {
       <div className="container">
         <Spinner />
         <Header
+          currentPathName={this.props.location.pathname}
           switchToLanguage={this.getToSwitchLanguage.bind(this)()}
           handlerSwitchLanguage={this.handlerSwitchLanguage.bind(this)}
         />
@@ -63,7 +64,7 @@ class App extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
   const { locale, projects, errors } = state;
 
   return {

@@ -225,12 +225,34 @@ p, dl {
 .navigation {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -40px;
 
   &__item {
+    position: relative;;
     float: left;
+    font-size: .75em;
+    font-family: 'Lato-Light', sans-serif;
     list-style-type: none;
+    text-transform: uppercase;
     margin-right: 10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      display: block;
+      width: 0;
+      height: 1px;
+      background: @font-color-default;
+      .transition(.3s);
+    }
+
+    &--active {
+      &:before {
+        width: 100%;
+      }
+    }
   }
 }
 
