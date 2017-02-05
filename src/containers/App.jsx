@@ -66,6 +66,7 @@ class App extends React.Component {
 
 function mapStateToProps(state, ownProps) {
   const { locale, projects, errors } = state;
+  console.dir(state);
 
   return {
     language: locale.language,
@@ -79,7 +80,6 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(CommonActions, dispatch),
     getTranslationsFromState: params => dispatch(getTranslationsFromState(params))
-    // isLocalStorageHasData: () => dispatch(isLocalStorageHasData())
   };
 }
 

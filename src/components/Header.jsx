@@ -38,6 +38,7 @@ class Header extends React.Component {
 
   render() {
     const { currentPathName, handlerSwitchLanguage, switchToLanguage } = this.props;
+    console.log(this.props);
 
     return (
       <header className="developer">
@@ -67,9 +68,9 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  // ToDo: Fix it
-  // switchToLanguage: React.propTypes.string.isRequired,
-  // handlerSwitchLanguage: React.propTypes.func.isRequired
+  currentPathName: React.PropTypes.string.isRequired,
+  switchToLanguage: React.PropTypes.string.isRequired,
+  handlerSwitchLanguage: React.PropTypes.func.isRequired
 };
 
 export default Header;

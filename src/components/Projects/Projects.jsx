@@ -137,9 +137,9 @@ class Projects extends React.Component {
   }
 }
 
-// Projects.propTypes = {
-//   getTranslation: React.propTypes.func.isRequired,
-//   projects: React.propTypes.array.isRequired
-// };
+Projects.propTypes = {
+  getTranslation: React.PropTypes.func.isRequired,
+  projects: React.PropTypes.array.isRequired
+};
 
 export default Projects;
