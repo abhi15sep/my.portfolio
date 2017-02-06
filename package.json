@@ -4,8 +4,6 @@
   "description": "portfolio page of Frontend Developer Sergey Illarionov",
   "scripts": {
     "prod-build": "NODE_ENV=production webpack",
-    "dev-build": "NODE_ENV=development webpack",
-    "dev-watch": "NODE_ENV=development webpack --watch",
     "devserver": "webpack-dev-server"
   },
   "author": {
