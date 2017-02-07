@@ -51,9 +51,7 @@ module.exports = {
   },
 
   performance: {
-    // maxAssetSize: 100,
-    // maxInitialChunkSize: 300,
-    hints: isProd
+    hints: isProd ? 'warning' : false
   },
 
   module: {
@@ -67,13 +65,13 @@ module.exports = {
       {
         test: /\.css$/,
         loader: isProd
-                    ? ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' })
+                    ? ExtractTextPlugin.extract({ fallback: 'style-loader', loader: 'css-loader' })
                     : ['style-loader', 'css-loader']
       },
       {
         test: /\.less$/,
         loader: isProd
-                    ? ExtractTextPlugin.extract({ fallbackLoader: 'style-loader',
+                    ? ExtractTextPlugin.extract({ fallback: 'style-loader',
                       loader: ['css-loader', 'less-loader'] })
                     : ['style-loader', 'css-loader', 'less-loader']
       },
