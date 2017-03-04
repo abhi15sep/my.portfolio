@@ -286,7 +286,7 @@
     "customer": "europe",
     "involvement_duration": {
       "start": "2017-01",
-      "finish": "2016-05"
+      "finish": "2017-05"
     },
     "roles": ["frontend"],
     "responsibilities": "Разработка SPA (Single Page Application) на основе React.js. Динамические роутинги, обмен данных с API, сохранение состояния приложения (Redux)",
