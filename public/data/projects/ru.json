@@ -281,15 +281,15 @@
 
   {
     "id": 15,
-    "title": "Exaloc Betkey - администрационная панель.",
-    "description": "",
+    "title": "Exaloc Betkey - мультимодульная система администрации",
+    "description": "Мультимодульная, мультиязычная административная система для систематизации и сбора статистики бэтшопов(магазинов ставок)",
     "customer": "europe",
     "involvement_duration": {
       "start": "2017-01",
       "finish": "2017-05"
     },
     "roles": ["frontend"],
-    "responsibilities": "Разработка SPA (Single Page Application) на основе React.js. Динамические роутинги, обмен данных с API, сохранение состояния приложения (Redux)",
+    "responsibilities": "Разработка SPA (Single Page Application) на базе React.js. Динамические роутинги, обмен данных с API, сохранение состояния приложения (Redux)",
     "team_size": 1,
     "technologies": ["html5", "css3", "less", "JS ES6", "react.js", "redux" "webpack", "silex", "mongoDB", "redis" "git"],
     "realizations": ["desktop", "tablet", "mobile"],
