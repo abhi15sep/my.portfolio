@@ -38,7 +38,6 @@ class Header extends React.Component {
 
   render() {
     const { currentPathName, handlerSwitchLanguage, switchToLanguage } = this.props;
-    console.log(this.props);
 
     return (
       <header className="developer">

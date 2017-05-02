@@ -10,7 +10,6 @@ import CommonActions from '../actions/CommonActions';
 import Header from '../components/Header';
 
 class App extends React.Component {
-
   componentWillMount() {
     if (!isLocalStorageHasValidateData()) {
       this.getAllData.bind(this)(this.props.language);
@@ -45,8 +44,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('AppProps', this.props);
-
     return (
       <div className="container">
         <Spinner />
@@ -57,7 +54,7 @@ class App extends React.Component {
         />
         <div className="content">
           { React.cloneElement(this.props.children,
-            { getTranslation: this.props.getTranslationsFromState }) }
+              { getTranslation: this.props.getTranslationsFromState }) }
         </div>
       </div>
     );
@@ -66,7 +63,6 @@ class App extends React.Component {
 
 function mapStateToProps(state, ownProps) {
   const { locale, projects, errors } = state;
-  console.dir(state);
 
   return {
     language: locale.language,

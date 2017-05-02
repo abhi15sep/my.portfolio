@@ -68,7 +68,6 @@ class ProjectsContainer extends React.Component {
   }
 
   render() {
-    console.log('ProjectsProps', this.props);
     const { getTranslation, projects, isGalleryShow, currentProjectID } = this.props;
 
     return (

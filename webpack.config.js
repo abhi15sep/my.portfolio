@@ -36,7 +36,8 @@ module.exports = {
       'axios',
       'react-slick',
       'react-redux-spinner',
-      'redux-localstorage'
+      'redux-localstorage',
+      'json-loader'
     ]
   },
   output: {
@@ -51,7 +52,7 @@ module.exports = {
   },
 
   performance: {
-    hints: isProd ? 'warning' : false
+    hints: isProd
   },
 
   module: {
